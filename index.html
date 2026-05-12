@@ -5,1084 +5,1015 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vani Milan — Vaishya Vani Community Matrimony</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#E11D48;--rose2:#BE123C;--rose3:#9F1239;--amber:#F59E0B;--amber2:#D97706;--purple:#7C3AED;--pink:#EC4899;--bg:#08080F;--bg2:#0D0D18;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.08);--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#F5F0EB;--text2:rgba(245,240,235,0.62);--text3:rgba(245,240,235,0.36)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root {
+  --maroon: #7B1C1C;
+  --maroon-deep: #5C0E0E;
+  --maroon-light: #9E2A2A;
+  --gold: #C9973A;
+  --gold-light: #E8C070;
+  --gold-pale: #F5E6C8;
+  --cream: #FDF8F2;
+  --cream-dark: #F3EBE0;
+  --text: #2C1810;
+  --text-muted: #7A6358;
+  --white: #FFFFFF;
+  --shadow: 0 4px 24px rgba(123,28,28,0.12);
+  --shadow-hover: 0 12px 40px rgba(123,28,28,0.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Bricolage Grotesque',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-/* AURORA */
-.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:orb 20s ease-in-out infinite}
-.orb:nth-child(1){width:650px;height:650px;background:radial-gradient(circle,#9F1239 0%,transparent 65%);top:-180px;left:-120px;animation-duration:22s}
-.orb:nth-child(2){width:550px;height:550px;background:radial-gradient(circle,#6D28D9 0%,transparent 65%);top:80px;right:-80px;animation-duration:17s;animation-delay:-6s}
-.orb:nth-child(3){width:480px;height:480px;background:radial-gradient(circle,#92400E 0%,transparent 65%);bottom:15%;left:25%;animation-duration:24s;animation-delay:-11s}
-.orb:nth-child(4){width:380px;height:380px;background:radial-gradient(circle,#881337 0%,transparent 65%);bottom:-80px;right:15%;animation-duration:15s;animation-delay:-4s}
-@keyframes orb{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(50px,-35px) scale(1.06)}66%{transform:translate(-35px,55px) scale(.96)}}
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");opacity:.45;z-index:1;pointer-events:none}
-.z{position:relative;z-index:2}
-/* LAYOUT */
-.w{max-width:1180px;margin:0 auto;padding:0 28px}
-/* GLASS */
-.glass{background:rgba(255,255,255,.045);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--border2);border-radius:20px}
-/* BTNS */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 26px;border-radius:100px;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:700;cursor:pointer;border:none;text-decoration:none;transition:all .22s cubic-bezier(.4,0,.2,1);letter-spacing:-.01em;white-space:nowrap}
-.btn-p{background:linear-gradient(135deg,var(--rose) 0%,var(--rose2) 100%);color:#fff;box-shadow:0 0 0 1px rgba(225,29,72,.3),0 6px 28px rgba(225,29,72,.28),inset 0 1px 0 rgba(255,255,255,.18)}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(225,29,72,.5),0 14px 44px rgba(225,29,72,.42),inset 0 1px 0 rgba(255,255,255,.22)}
-.btn-g{background:var(--surface2);color:var(--text);border:1px solid var(--border2);backdrop-filter:blur(12px)}
-.btn-g:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.24);transform:translateY(-1px)}
-.btn-a{background:linear-gradient(135deg,var(--amber) 0%,var(--amber2) 100%);color:#000;box-shadow:0 0 0 1px rgba(245,158,11,.3),0 6px 28px rgba(245,158,11,.24),inset 0 1px 0 rgba(255,255,255,.28);font-weight:800}
-.btn-a:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(245,158,11,.5),0 14px 44px rgba(245,158,11,.38)}
-.btn-sm{padding:9px 18px;font-size:13px}
-/* TAGS */
-.tag{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.tag-r{background:rgba(225,29,72,.12);border:1px solid rgba(225,29,72,.25);color:#FB7185}
-.tag-a{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);color:#FCD34D}
-.tag-g{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#4ADE80}
-.tag-v{background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.25);color:#A78BFA}
-/* INPUTS */
-.iw{margin-bottom:16px}
-.iw label{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
-.inp{width:100%;padding:12px 15px;background:rgba(255,255,255,.05);border:1px solid var(--border2);border-radius:10px;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;color:var(--text);outline:none;transition:all .2s;appearance:none;-webkit-appearance:none}
-.inp::placeholder{color:var(--text3)}
-.inp:focus{border-color:var(--rose);background:rgba(225,29,72,.05);box-shadow:0 0 0 3px rgba(225,29,72,.12)}
-.inp option{background:#14141f;color:var(--text)}
-/* SECTION HEADERS */
-.ey{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:12px;display:flex;align-items:center;gap:8px;justify-content:center}
-.ey::before,.ey::after{content:'';display:block;width:32px;height:1px;background:var(--rose);opacity:.5}
-.st{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4.2vw,3rem);font-weight:400;line-height:1.15;letter-spacing:-.025em;color:var(--text);margin-bottom:14px}
-.st em{font-style:italic;color:transparent;background:linear-gradient(135deg,var(--amber) 0%,var(--rose) 100%);-webkit-background-clip:text;background-clip:text}
-.ss{font-size:16px;line-height:1.75;color:var(--text2);max-width:500px;margin-bottom:52px}
-/* NAVBAR */
-.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:100;width:calc(100% - 40px);max-width:1140px;background:rgba(8,8,15,.75);backdrop-filter:blur(32px) saturate(200%);-webkit-backdrop-filter:blur(32px) saturate(200%);border:1px solid var(--border2);border-radius:100px;padding:0 8px 0 18px}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:58px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
+
+/* ── UTILITY ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:15px;cursor:pointer;transition:all .25s;border:none;text-decoration:none}
+.btn-primary{background:var(--maroon);color:#fff;box-shadow:0 4px 16px rgba(123,28,28,0.3)}
+.btn-primary:hover{background:var(--maroon-deep);transform:translateY(-2px);box-shadow:0 8px 24px rgba(123,28,28,0.4)}
+.btn-outline{background:transparent;color:var(--maroon);border:2px solid var(--maroon)}
+.btn-outline:hover{background:var(--maroon);color:#fff}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#B8832A);color:#fff;box-shadow:0 4px 16px rgba(201,151,58,0.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,151,58,0.5)}
+.section-tag{display:inline-block;background:var(--gold-pale);color:var(--gold);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:14px}
+.section-title{font-size:clamp(2rem,4vw,2.8rem);color:var(--maroon-deep);margin-bottom:12px;line-height:1.2}
+.section-sub{color:var(--text-muted);font-size:16px;max-width:560px;margin:0 auto 48px;line-height:1.7}
+.text-center{text-align:center}
+
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,248,242,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,151,58,0.2);transition:all .3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.lmark{width:32px;height:32px;background:linear-gradient(135deg,var(--rose),var(--rose2));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 4px 14px rgba(225,29,72,.4)}
-.lname{font-family:'DM Serif Display',serif;font-size:19px;color:var(--text);letter-spacing:-.02em}
-.lsub{font-size:9px;letter-spacing:.14em;color:var(--amber);display:block;margin-top:-3px;text-transform:uppercase}
-.nl{display:flex;align-items:center;gap:2px}
-.nl a{color:var(--text2);text-decoration:none;font-size:13px;font-weight:500;padding:7px 13px;border-radius:100px;transition:all .2s}
-.nl a:hover{color:var(--text);background:var(--surface2)}
-.nc{display:flex;gap:8px;align-items:center}
-.hb{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:8px}
-.hb span{display:block;width:19px;height:1.5px;background:var(--text2);border-radius:2px;transition:all .3s}
-@media(max-width:880px){.nl,.nc{display:none}.hb{display:flex}.nav{width:calc(100% - 20px);top:8px;border-radius:18px}}
-.mn{display:none;position:fixed;top:76px;left:10px;right:10px;background:rgba(8,8,20,.96);backdrop-filter:blur(40px);border:1px solid var(--border2);border-radius:18px;padding:18px;z-index:99}
-.mn.open{display:block}
-.mn a{display:block;padding:11px 14px;color:var(--text2);text-decoration:none;border-radius:10px;font-size:14px}
-.mn a:hover{background:var(--surface2);color:var(--text)}
-.mn .mb{display:flex;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px}
-.hi{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;width:100%}
-.hkicker{display:inline-flex;align-items:center;gap:7px;padding:5px 16px 5px 7px;background:rgba(225,29,72,.08);border:1px solid rgba(225,29,72,.22);border-radius:100px;margin-bottom:26px;font-size:12px;font-weight:700;color:#FB7185;letter-spacing:.03em}
-.hdot{width:22px;height:22px;border-radius:50%;background:rgba(225,29,72,.2);display:flex;align-items:center;justify-content:center;font-size:11px}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,5.2vw,4.2rem);font-weight:400;line-height:1.08;letter-spacing:-.03em;color:var(--text);margin-bottom:20px}
-.hero h1 em{font-style:italic;color:transparent;background:linear-gradient(135deg,var(--amber) 0%,var(--rose) 100%);-webkit-background-clip:text;background-clip:text}
-.hdesc{font-size:17px;line-height:1.78;color:var(--text2);margin-bottom:36px;font-weight:400}
-.hact{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
-.hsp{display:flex;align-items:center;gap:12px}
-.avs{display:flex}
-.avs span{width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);margin-left:-7px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
-.avs span:first-child{margin-left:0;background:linear-gradient(135deg,var(--amber2),var(--rose))}
-.avs span:nth-child(2){background:linear-gradient(135deg,var(--purple),var(--rose2))}
-.avs span:nth-child(3){background:linear-gradient(135deg,var(--rose),var(--amber2))}
-.avs span:nth-child(4){background:linear-gradient(135deg,var(--rose3),var(--purple))}
-.ptext{font-size:13px;color:var(--text2);line-height:1.5}
-.ptext strong{color:var(--text)}
-/* HERO RIGHT */
-.hr{display:flex;flex-direction:column;gap:14px}
-.hsr{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.hsc{padding:20px 16px;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:16px;backdrop-filter:blur(20px);transition:all .3s}
-.hsc:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
-.snum{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--text);display:block;margin-bottom:3px}
-.slbl{font-size:11px;color:var(--text3);font-weight:500}
-.hfc{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.fc{padding:18px;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:14px;backdrop-filter:blur(20px);transition:all .3s}
-.fc:hover{background:rgba(255,255,255,.07);transform:translateY(-2px)}
-.fci{width:38px;height:38px;border-radius:11px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;font-size:17px}
-.fc h4{font-size:14px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
-.fc p{font-size:12px;color:var(--text3);line-height:1.5}
-@media(max-width:880px){.hi{grid-template-columns:1fr;gap:40px}.hr{display:none}.hero{padding-top:95px}}
-/* SEARCH */
-.sw{padding:52px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.spill{display:flex;justify-content:center;gap:6px;margin-bottom:28px}
-.pill{padding:10px 24px;border-radius:100px;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:700;cursor:pointer;border:1px solid var(--border2);transition:all .2s;color:var(--text2);background:transparent}
-.pill.on{background:var(--rose);color:#fff;border-color:var(--rose);box-shadow:0 4px 18px rgba(225,29,72,.32)}
-.sflds{display:grid;grid-template-columns:repeat(5,1fr) auto;gap:9px;align-items:end}
-@media(max-width:768px){.sflds{grid-template-columns:1fr 1fr}.sflds .sgo{grid-column:1/-1}}
-/* WHY */
-.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
-.wc{padding:38px 30px;border:1px solid var(--border);background:transparent;transition:all .3s;position:relative;overflow:hidden}
-.wc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(225,29,72,.06) 0%,transparent 70%);opacity:0;transition:opacity .3s}
-.wc:hover::before{opacity:1}
-.wc:hover{background:rgba(255,255,255,.03)}
-.wi{font-size:26px;margin-bottom:16px;display:block}
-.wc h3{font-size:17px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}
-.wc p{font-size:13px;color:var(--text2);line-height:1.7}
-@media(max-width:768px){.wg{grid-template-columns:1fr}}
-/* PROFILES */
-.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.pc{border-radius:18px;overflow:hidden;border:1px solid var(--border2);background:rgba(255,255,255,.03);backdrop-filter:blur(12px);transition:all .3s cubic-bezier(.4,0,.2,1);cursor:pointer}
-.pc:hover{transform:translateY(-6px);border-color:rgba(225,29,72,.35);box-shadow:0 20px 55px rgba(0,0,0,.5),0 0 0 1px rgba(225,29,72,.12)}
-.pp{height:155px;position:relative;display:flex;align-items:center;justify-content:center}
-.pi{font-family:'DM Serif Display',serif;font-size:52px;opacity:.28;font-style:italic}
-.pb{position:absolute;top:8px;right:8px;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
-.pbd{padding:14px}
-.pn{font-size:15px;font-weight:700;letter-spacing:-.02em}
-.pm{font-size:12px;color:var(--text3);margin-bottom:10px}
-.pr2{display:flex;gap:6px}
-.pa{flex:1;padding:9px;border-radius:9px;font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;background:rgba(225,29,72,.1);border:1px solid rgba(225,29,72,.22);color:#FB7185;display:flex;align-items:center;justify-content:center;gap:4px}
-.pa:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
-.ps{padding:9px 11px;border-radius:9px;cursor:pointer;background:var(--surface);border:1px solid var(--border2);color:var(--text3);transition:all .2s;font-size:13px}
-.ps:hover{border-color:var(--amber);color:var(--amber);background:rgba(245,158,11,.07)}
-@media(max-width:1024px){.pg{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:768px){.pg{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.pg{grid-template-columns:1fr}}
-/* STORIES */
-.stband{padding:110px 0;background:linear-gradient(180deg,transparent 0%,rgba(159,18,57,.07) 50%,transparent 100%)}
-.stg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.stc{padding:26px;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:18px;backdrop-filter:blur(20px);transition:all .3s}
-.stc:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
-.stq{font-family:'DM Serif Display',serif;font-size:38px;color:var(--rose);line-height:1;margin-bottom:12px}
-.stt{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:20px;font-style:italic}
-.stcp{display:flex;align-items:center;gap:11px}
-.stav{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rose2));display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:17px;color:#fff}
-.stn{font-size:14px;font-weight:700;letter-spacing:-.01em}
-.stl{font-size:11px;color:var(--text3);margin-top:1px}
-@media(max-width:768px){.stg{grid-template-columns:1fr}}
-/* PLANS */
-.plr{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:660px;margin:0 auto}
-.pl{border-radius:22px;overflow:hidden;border:1px solid var(--border2);background:rgba(255,255,255,.03);transition:all .3s}
-.pl.feat{border-color:rgba(225,29,72,.35);background:rgba(225,29,72,.05);box-shadow:0 0 0 1px rgba(225,29,72,.1),0 22px 70px rgba(225,29,72,.1);transform:scale(1.03)}
-.ph{padding:26px;border-bottom:1px solid var(--border)}
-.ph.fh{background:linear-gradient(135deg,rgba(225,29,72,.18) 0%,rgba(124,58,237,.08) 100%)}
-.pp2{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
-.pname{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:10px}
-.ppw{display:flex;align-items:baseline;gap:4px}
-.pamt{font-size:36px;font-weight:800;letter-spacing:-.03em}
-.pper{font-size:13px;color:var(--text3)}
-.pb2{padding:22px}
-.pf{list-style:none}
-.pf li{display:flex;align-items:center;gap:9px;padding:8px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,.04)}
-.pf li:last-child{border:none}
-.pf li::before{content:'✓';color:#4ADE80;font-weight:700;font-size:12px;flex-shrink:0}
-.pf li.no{color:var(--text3)}
-.pf li.no::before{content:'–';color:var(--text3)}
-.pft{padding:0 22px 22px}
-@media(max-width:580px){.plr{grid-template-columns:1fr;max-width:380px}.pl.feat{transform:none}}
-/* EVENTS */
-.evg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.evc{border-radius:18px;overflow:hidden;border:1px solid var(--border2);background:rgba(255,255,255,.03);backdrop-filter:blur(12px);transition:all .3s}
-.evc:hover{transform:translateY(-4px);border-color:rgba(245,158,11,.3)}
-.evh{padding:22px;position:relative;overflow:hidden}
-.evh::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(225,29,72,.14) 0%,rgba(124,58,237,.08) 100%)}
-.evh>*{position:relative}
-.evtt{font-family:'DM Serif Display',serif;font-size:17px;line-height:1.3;margin-top:8px}
-.evb{padding:18px}
-.evdt{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--text3);margin-bottom:7px}
-.evbtn{display:block;text-align:center;margin-top:14px;padding:9px;border-radius:9px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.22);color:var(--amber);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
-.evbtn:hover{background:var(--amber);color:#000}
-@media(max-width:768px){.evg{grid-template-columns:1fr}}
-/* PROCESS */
-.procr{display:grid;grid-template-columns:repeat(4,1fr);position:relative;gap:0}
-.procr::before{content:'';position:absolute;top:28px;left:calc(12.5% + 22px);right:calc(12.5% + 22px);height:1px;background:linear-gradient(90deg,var(--rose),var(--amber));opacity:.35}
-.prs{text-align:center;padding:0 14px;position:relative;z-index:1}
-.prn{width:56px;height:56px;border-radius:50%;margin:0 auto 18px;background:rgba(225,29,72,.1);border:1px solid rgba(225,29,72,.3);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:21px;color:#FB7185;box-shadow:0 0 0 4px var(--bg),0 0 0 5px rgba(225,29,72,.14)}
-.prs h3{font-size:14px;font-weight:700;margin-bottom:7px;letter-spacing:-.01em}
-.prs p{font-size:12px;color:var(--text3);line-height:1.6}
-@media(max-width:768px){.procr{grid-template-columns:1fr 1fr;gap:26px}.procr::before{display:none}}
-/* TESTI */
-.teg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.tec{padding:24px;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:16px;backdrop-filter:blur(12px);transition:all .3s}
-.tec:hover{background:rgba(255,255,255,.07)}
-.test{color:var(--amber);font-size:13px;letter-spacing:2px;margin-bottom:12px}
-.tet{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:16px;font-style:italic}
-.tea{font-weight:700;font-size:13px}
-.ter{font-size:11px;color:var(--text3);margin-top:2px}
-@media(max-width:768px){.teg{grid-template-columns:1fr}}
-/* FOOTER */
-.foot{border-top:1px solid var(--border);padding:64px 0 32px;margin-top:110px}
-.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px}
-.fd{font-size:13px;color:var(--text3);line-height:1.8;margin-top:14px;max-width:260px}
-.fc2 h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px}
-.fc2 a{display:block;font-size:13px;color:var(--text2);text-decoration:none;margin-bottom:9px;transition:color .2s}
-.fc2 a:hover{color:var(--text)}
-.fb{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--text3)}
-@media(max-width:768px){.fg{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}}
-/* MODAL */
-.mbg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);z-index:1000;justify-content:center;align-items:center;padding:14px}
-.mbg.open{display:flex}
-.mbox{background:#0E0E18;border:1px solid var(--border2);border-radius:26px;width:100%;max-width:450px;max-height:90vh;overflow-y:auto;box-shadow:0 40px 120px rgba(0,0,0,.8);animation:mpop .25s cubic-bezier(.34,1.56,.64,1)}
-.mbox.wide{max-width:600px}
-@keyframes mpop{from{transform:scale(.94) translateY(14px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
-.mh{padding:22px 22px 0;display:flex;justify-content:space-between;align-items:flex-start}
-.mh h2{font-family:'DM Serif Display',serif;font-size:22px;letter-spacing:-.02em}
-.mx{width:32px;height:32px;border-radius:50%;background:var(--surface);border:1px solid var(--border2);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:15px;transition:all .2s;flex-shrink:0}
-.mx:hover{background:var(--surface2);color:var(--text)}
-.mb2{padding:22px}
-.mts{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:11px;padding:3px;margin-bottom:22px;gap:3px}
-.mt{padding:9px;text-align:center;border-radius:9px;cursor:pointer;font-size:13px;font-weight:700;color:var(--text3);transition:all .2s}
-.mt.on{background:var(--surface2);color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.2)}
-.rfo{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
-.rfb{padding:9px 5px;border-radius:9px;text-align:center;border:1px solid var(--border2);cursor:pointer;font-size:12px;font-weight:700;color:var(--text3);transition:all .2s;background:transparent}
-.rfb.on{border-color:var(--rose);color:#FB7185;background:rgba(225,29,72,.08)}
-.gtog{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
-.go{padding:11px;border-radius:9px;text-align:center;border:1px solid var(--border2);cursor:pointer;font-size:13px;font-weight:700;color:var(--text3);transition:all .2s;background:transparent}
-.go.on{border-color:var(--rose);color:#FB7185;background:rgba(225,29,72,.08)}
-.orow{display:flex;gap:7px;justify-content:center;margin:14px 0}
-.orow input{width:44px;height:50px;text-align:center;font-size:21px;font-weight:800;background:var(--surface);border:1px solid var(--border2);border-radius:9px;color:var(--text);outline:none;font-family:'Bricolage Grotesque',sans-serif;transition:all .2s}
-.orow input:focus{border-color:var(--rose);background:rgba(225,29,72,.05)}
-.fn{font-size:12px;color:var(--text3);text-align:center;margin:5px 0 12px}
-.fl{color:var(--rose);text-decoration:none;font-weight:700;cursor:pointer}
-.fdiv{display:flex;align-items:center;gap:10px;margin:16px 0}
-.fdiv span{height:1px;flex:1;background:var(--border)}
-.fdiv p{font-size:12px;color:var(--text3);white-space:nowrap}
-/* PROFILE DETAIL */
-.dph{height:170px;border-radius:14px;margin-bottom:18px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.din{font-family:'DM Serif Display',serif;font-size:75px;opacity:.22;font-style:italic}
-.db{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:5px;align-items:flex-end}
-.dg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.df label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);display:block;margin-bottom:2px}
-.df span{font-size:13px;color:var(--text)}
-.ds{font-family:'DM Serif Display',serif;font-size:17px;color:#FB7185;padding-bottom:7px;border-bottom:1px solid var(--border);margin:18px 0 12px}
-.lk{background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:12px;padding:16px;text-align:center;margin-top:14px}
-.lk p{font-size:12px;color:var(--text3);margin-bottom:10px}
-.ab{background:rgba(225,29,72,.04);border-left:2px solid var(--rose);border-radius:0 9px 9px 0;padding:12px 14px;margin:12px 0;font-size:13px;color:var(--text2);line-height:1.7}
-/* TOAST */
-.tst{position:fixed;bottom:24px;right:24px;z-index:9999;padding:12px 18px;border-radius:12px;font-size:13px;font-weight:600;max-width:300px;background:rgba(14,14,30,.96);border:1px solid var(--border2);color:var(--text);backdrop-filter:blur(20px);box-shadow:0 14px 44px rgba(0,0,0,.5);animation:tstin .28s cubic-bezier(.34,1.56,.64,1)}
-.tst.ok{border-color:rgba(34,197,94,.3)}
-.tst.er{border-color:rgba(225,29,72,.3)}
-@keyframes tstin{from{transform:translateY(18px) scale(.95);opacity:0}to{transform:none;opacity:1}}
-/* DEMO BAR */
-.dbar{background:linear-gradient(90deg,rgba(225,29,72,.14) 0%,rgba(245,158,11,.09) 50%,rgba(225,29,72,.14) 100%);border-bottom:1px solid rgba(225,29,72,.18);text-align:center;padding:9px 16px;font-size:12px;color:var(--text2);position:relative;z-index:2}
-.dbar strong{color:var(--amber)}
-/* DIVIDER */
-.gd{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent)}
-/* SECTIONS */
-.sec{padding:110px 0}.sec-sm{padding:70px 0}
-/* REVEAL */
-.rev{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
-.rev.vis{opacity:1;transform:none}
-/* HOROSCOPE SECTION */
-.horo-wrap{max-width:780px;margin:0 auto}
-.horo-input-card{background:rgba(255,255,255,.05);border:1px solid var(--border2);border-radius:24px;padding:40px;backdrop-filter:blur(24px);margin-bottom:32px}
-.horo-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end;margin-top:24px}
-@media(max-width:600px){.horo-fields{grid-template-columns:1fr;}}
-.horo-result{display:none;animation:mpop .4s cubic-bezier(.34,1.56,.64,1)}
-.horo-result.show{display:block}
-.rashi-hero{text-align:center;padding:36px 24px;background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(225,29,72,.12));border:1px solid rgba(124,58,237,.25);border-radius:20px;margin-bottom:24px;position:relative;overflow:hidden}
-.rashi-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(245,158,11,.08),transparent 60%)}
-.rashi-symbol{font-size:72px;margin-bottom:10px;display:block;line-height:1;filter:drop-shadow(0 0 20px rgba(245,158,11,.4));animation:floatSym 3s ease-in-out infinite}
-@keyframes floatSym{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.rashi-name{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--text);letter-spacing:-.02em;margin-bottom:4px}
-.rashi-eng{font-size:13px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
-.rashi-elem{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:100px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);color:var(--amber);font-size:12px;font-weight:700;letter-spacing:.06em}
-.horo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
-@media(max-width:600px){.horo-grid{grid-template-columns:1fr 1fr}}
-.horo-card{background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:16px;padding:18px 16px;text-align:center;transition:all .3s}
-.horo-card:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
-.horo-card-icon{font-size:26px;margin-bottom:10px;display:block}
-.horo-card-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:5px}
-.horo-card-val{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em}
-.horo-card-sub{font-size:11px;color:var(--text3);margin-top:3px}
-.manglik-yes{color:#FB7185}
-.manglik-no{color:#4ADE80}
-.manglik-partial{color:var(--amber)}
-.lucky-row{background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:16px;padding:20px 22px;margin-bottom:16px}
-.lucky-row h4{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
-.lucky-items{display:flex;flex-wrap:wrap;gap:10px}
-.lucky-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:100px;border:1px solid var(--border2);background:var(--surface);font-size:13px;font-weight:600;color:var(--text2)}
-.compat-bar{margin-bottom:16px;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:16px;padding:20px 22px}
-.compat-bar h4{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
-.compat-signs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.compat-sign{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:100px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);color:#4ADE80;font-size:12px;font-weight:600}
-.incompat-sign{background:rgba(225,29,72,.08);border:1px solid rgba(225,29,72,.2);color:#FB7185}
-.trait-list{display:flex;flex-wrap:wrap;gap:7px}
-.trait{padding:5px 12px;border-radius:100px;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);color:#A78BFA;font-size:12px;font-weight:600}
-.horo-cta{background:linear-gradient(135deg,rgba(225,29,72,.12),rgba(124,58,237,.08));border:1px solid rgba(225,29,72,.2);border-radius:16px;padding:20px 22px;text-align:center}
-.horo-cta p{font-size:13px;color:var(--text2);margin-bottom:14px}
-.progress-ring{display:flex;align-items:center;gap:14px;margin-bottom:10px}
-.prog-label{font-size:12px;color:var(--text3);min-width:80px;text-align:right}
-.prog-track{flex:1;height:6px;background:rgba(255,255,255,.07);border-radius:100px;overflow:hidden}
-.prog-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--rose),var(--amber));transition:width 1s cubic-bezier(.4,0,.2,1)}
-.score-num{font-size:12px;color:var(--text3);min-width:30px}
+.logo-icon{width:36px;height:36px;background:var(--maroon);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--maroon-deep)}
+.logo-sub{font-size:10px;color:var(--gold);letter-spacing:1px;display:block;margin-top:-4px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--maroon)}
+.nav-cta{display:flex;gap:10px}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--maroon);transition:all .3s;border-radius:2px}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--gold-pale);padding:20px 24px;z-index:99}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:12px 0;color:var(--text);text-decoration:none;font-size:16px;border-bottom:1px solid var(--cream-dark)}
+  .mobile-menu .btns{display:flex;gap:10px;margin-top:16px}
+}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--maroon-deep) 0%,var(--maroon) 45%,#9E3030 100%);z-index:0}
+.hero-pattern{position:absolute;inset:0;z-index:1;opacity:.06;background-image:repeating-linear-gradient(45deg,var(--gold-light) 0,var(--gold-light) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-glow{position:absolute;top:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,151,58,.25) 0%,transparent 70%);z-index:1;animation:pulseGlow 4s ease-in-out infinite}
+.hero-glow2{position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);z-index:1}
+@keyframes pulseGlow{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.1);opacity:1}}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;padding:60px 0}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(201,151,58,.4);color:var(--gold-light);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:8px 18px;border-radius:100px;margin-bottom:24px;backdrop-filter:blur(10px)}
+.hero-badge::before{content:'✦';color:var(--gold)}
+.hero h1{font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;line-height:1.15;margin-bottom:20px;font-weight:600}
+.hero h1 span{color:var(--gold-light)}
+.hero-desc{color:rgba(255,255,255,.75);font-size:17px;line-height:1.8;margin-bottom:36px;font-weight:300}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:16px;overflow:hidden;margin-top:44px}
+.stat-item{background:rgba(255,255,255,.05);padding:20px;text-align:center;backdrop-filter:blur(10px)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold-light);display:block}
+.stat-label{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;backdrop-filter:blur(16px);transition:all .3s;animation:floatCard 3s ease-in-out infinite}
+.hero-card:nth-child(2){animation-delay:.5s}
+.hero-card:nth-child(3){animation-delay:1s}
+.hero-card:nth-child(4){animation-delay:1.5s}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.hero-card-icon{font-size:24px;margin-bottom:10px}
+.hero-card h4{font-family:'Cormorant Garamond',serif;font-size:17px;color:#fff;margin-bottom:6px}
+.hero-card p{font-size:12px;color:rgba(255,255,255,.6);line-height:1.5}
+@media(max-width:768px){
+  .hero-content{grid-template-columns:1fr;gap:40px;padding:40px 0}
+  .hero-cards{display:none}
+  .hero h1{font-size:2.2rem}
+}
+
+/* ── SEARCH ── */
+.search-section{background:#fff;padding:48px 0;box-shadow:0 2px 20px rgba(123,28,28,.06)}
+.search-box{background:var(--cream);border-radius:20px;padding:32px;border:1px solid var(--gold-pale)}
+.gender-toggle{display:flex;gap:10px;margin-bottom:24px;justify-content:center}
+.gender-btn{flex:1;max-width:200px;padding:12px;border-radius:10px;border:2px solid var(--cream-dark);background:#fff;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;color:var(--text-muted);transition:all .2s;text-align:center}
+.gender-btn.active{border-color:var(--maroon);background:var(--maroon);color:#fff}
+.search-grid{display:grid;grid-template-columns:repeat(5,1fr) auto;gap:12px;align-items:end}
+.search-field label{display:block;font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.search-field select,.search-field input{width:100%;padding:11px 14px;border:1.5px solid #E8DDD6;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);background:#fff;outline:none;transition:border-color .2s;appearance:none;cursor:pointer}
+.search-field select:focus,.search-field input:focus{border-color:var(--maroon)}
+@media(max-width:768px){
+  .search-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .search-grid .search-btn-wrap{grid-column:1/-1}
+}
+
+/* ── WHY CHOOSE US ── */
+.why-section{padding:100px 0;background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:0}
+.why-card{background:#fff;border-radius:20px;padding:32px;border:1px solid var(--cream-dark);transition:all .3s;position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--maroon),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.why-card:hover::before{transform:scaleX(1)}
+.why-icon{width:56px;height:56px;border-radius:14px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+.why-card h3{font-size:20px;color:var(--maroon-deep);margin-bottom:10px}
+.why-card p{font-size:14px;color:var(--text-muted);line-height:1.7}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr}}
+
+/* ── PROFILES ── */
+.profiles-section{padding:100px 0;background:#fff}
+.profiles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.profile-card{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--cream-dark);transition:all .3s;cursor:pointer}
+.profile-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);border-color:var(--gold-pale)}
+.profile-photo{height:180px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.profile-initials{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;opacity:.5}
+.profile-badge{position:absolute;top:10px;right:10px;background:#16A34A;color:#fff;font-size:10px;font-weight:600;padding:3px 8px;border-radius:100px;display:flex;align-items:center;gap:4px}
+.premium-badge{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,var(--gold),#B8832A);color:#fff;font-size:10px;font-weight:600;padding:3px 8px;border-radius:100px}
+.profile-info{padding:16px}
+.profile-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--text);margin-bottom:2px}
+.profile-age{font-size:13px;color:var(--maroon);font-weight:600}
+.profile-meta{font-size:12px;color:var(--text-muted);line-height:1.8;margin:8px 0}
+.profile-meta span{display:flex;align-items:center;gap:5px}
+.profile-action{display:flex;gap:8px;margin-top:12px}
+.btn-interest{flex:1;background:var(--maroon);color:#fff;border:none;padding:9px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:5px}
+.btn-interest:hover{background:var(--maroon-deep)}
+.btn-save{background:var(--cream);color:var(--text-muted);border:1.5px solid var(--cream-dark);padding:9px 12px;border-radius:9px;cursor:pointer;transition:all .2s}
+.btn-save:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:1024px){.profiles-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.profiles-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.profiles-grid{grid-template-columns:1fr}}
+
+/* ── SUCCESS STORIES ── */
+.stories-section{padding:100px 0;background:linear-gradient(160deg,var(--maroon-deep) 0%,var(--maroon) 100%);position:relative;overflow:hidden}
+.stories-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(201,151,58,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,255,255,.05) 0%,transparent 40%)}
+.stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1}
+.story-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;backdrop-filter:blur(10px);transition:all .3s}
+.story-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.story-quote{font-size:28px;color:var(--gold);margin-bottom:14px;line-height:1}
+.story-text{font-size:14px;color:rgba(255,255,255,.8);line-height:1.8;margin-bottom:20px;font-style:italic}
+.story-couple{display:flex;align-items:center;gap:12px}
+.story-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#B8832A);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#fff;flex-shrink:0}
+.story-names{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff}
+.story-city{font-size:12px;color:rgba(255,255,255,.5);margin-top:1px}
+@media(max-width:768px){.stories-grid{grid-template-columns:1fr}}
+
+/* ── MEMBERSHIP ── */
+.membership-section{padding:100px 0;background:var(--cream)}
+.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:700px;margin:0 auto}
+.plan-card{background:#fff;border-radius:24px;overflow:hidden;border:2px solid var(--cream-dark);transition:all .3s}
+.plan-card.popular{border-color:var(--gold);transform:scale(1.03);box-shadow:0 20px 60px rgba(201,151,58,.2)}
+.plan-header{padding:28px;background:var(--cream)}
+.plan-header.premium-header{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon))}
+.plan-popular-badge{display:inline-block;background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px}
+.plan-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin-bottom:8px}
+.plan-name.white{color:#fff}
+.plan-price{display:flex;align-items:baseline;gap:4px}
+.plan-amount{font-size:36px;font-weight:700;color:var(--maroon-deep)}
+.plan-amount.white{color:#fff}
+.plan-period{font-size:14px;color:var(--text-muted)}
+.plan-period.white{color:rgba(255,255,255,.6)}
+.plan-body{padding:24px}
+.plan-features{list-style:none}
+.plan-features li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14px;color:var(--text-muted);border-bottom:1px solid var(--cream-dark)}
+.plan-features li:last-child{border:none}
+.plan-features li::before{content:'✓';color:#16A34A;font-weight:700;flex-shrink:0}
+.plan-features li.no::before{content:'✗';color:#D1D5DB}
+.plan-cta{padding:0 24px 24px}
+@media(max-width:600px){.plans-grid{grid-template-columns:1fr;max-width:380px}.plan-card.popular{transform:none}}
+
+/* ── EVENTS ── */
+.events-section{padding:100px 0;background:#fff}
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.event-card{border-radius:16px;overflow:hidden;border:1px solid var(--cream-dark);transition:all .3s}
+.event-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.event-header{background:linear-gradient(135deg,var(--maroon),var(--maroon-light));padding:20px;position:relative}
+.event-type{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-light);background:rgba(201,151,58,.2);padding:4px 10px;border-radius:100px;display:inline-block;margin-bottom:10px}
+.event-title{font-family:'Cormorant Garamond',serif;font-size:19px;color:#fff;line-height:1.3}
+.event-body{padding:18px;background:#fff}
+.event-detail{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:8px}
+.event-detail:last-child{margin-bottom:0}
+.event-icon{font-size:15px}
+.event-rsvp{display:block;text-align:center;background:var(--maroon);color:#fff;padding:10px;border-radius:9px;font-size:13px;font-weight:500;text-decoration:none;margin-top:14px;transition:background .2s}
+.event-rsvp:hover{background:var(--maroon-deep)}
+@media(max-width:768px){.events-grid{grid-template-columns:1fr}}
+
+/* ── PROCESS ── */
+.process-section{padding:100px 0;background:var(--cream-dark)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process-steps::before{content:'';position:absolute;top:36px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:2px;background:linear-gradient(90deg,var(--maroon),var(--gold));z-index:0}
+.step-item{text-align:center;position:relative;z-index:1}
+.step-num{width:72px;height:72px;border-radius:50%;background:var(--maroon);color:#fff;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:4px solid var(--cream-dark);box-shadow:0 0 0 4px var(--maroon),0 4px 20px rgba(123,28,28,.3)}
+.step-icon{font-size:26px;display:block;margin-bottom:6px}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--maroon-deep);margin-bottom:8px}
+.step-desc{font-size:13px;color:var(--text-muted);line-height:1.6}
+@media(max-width:768px){
+  .process-steps{grid-template-columns:1fr 1fr;gap:28px}
+  .process-steps::before{display:none}
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials-section{padding:100px 0;background:#fff}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testi-card{background:var(--cream);border-radius:16px;padding:24px;border:1px solid var(--gold-pale)}
+.testi-stars{color:var(--gold);font-size:16px;letter-spacing:2px;margin-bottom:14px}
+.testi-text{font-size:14px;color:var(--text-muted);line-height:1.8;margin-bottom:18px;font-style:italic}
+.testi-author{font-weight:600;color:var(--text);font-size:14px}
+.testi-role{font-size:12px;color:var(--text-muted);margin-top:2px}
+@media(max-width:768px){.testi-grid{grid-template-columns:1fr}}
+
+/* ── FOOTER ── */
+.footer{background:var(--maroon-deep);color:rgba(255,255,255,.8);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo-text{color:#fff}
+.footer-brand p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.55);margin-top:12px}
+.footer-col h4{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold-light);margin-bottom:16px}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.35);flex-wrap:gap}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr};.footer-brand{grid-column:1/-1}}
+
+/* ── MODALS ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;backdrop-filter:blur(4px);justify-content:center;align-items:center;padding:16px}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:24px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;animation:modalIn .3s ease-out}
+@keyframes modalIn{from{transform:translateY(20px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.modal-header{padding:24px 28px 0;display:flex;justify-content:space-between;align-items:center}
+.modal-header h2{font-size:24px;color:var(--maroon-deep)}
+.modal-close{width:36px;height:36px;border-radius:50%;background:var(--cream);border:none;cursor:pointer;font-size:18px;color:var(--text-muted);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.modal-close:hover{background:var(--cream-dark)}
+.modal-body{padding:24px 28px}
+.modal-tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--cream);border-radius:10px;padding:4px;margin-bottom:24px}
+.modal-tab{padding:10px;text-align:center;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;color:var(--text-muted);transition:all .2s}
+.modal-tab.active{background:#fff;color:var(--maroon);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.form-group input,.form-group select{width:100%;padding:12px 16px;border:1.5px solid #E0D6CE;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text);outline:none;transition:border-color .2s;background:#fff}
+.form-group input:focus,.form-group select:focus{border-color:var(--maroon)}
+.gender-select{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.gender-opt{padding:12px;border:2px solid #E0D6CE;border-radius:10px;text-align:center;cursor:pointer;font-size:14px;font-weight:500;color:var(--text-muted);transition:all .2s}
+.gender-opt.active{border-color:var(--maroon);background:var(--maroon);color:#fff}
+.otp-input{display:flex;gap:10px;justify-content:center;margin:16px 0}
+.otp-input input{width:48px;height:52px;text-align:center;font-size:22px;font-weight:700;border:2px solid #E0D6CE;border-radius:10px;outline:none;font-family:'DM Sans',sans-serif;color:var(--maroon-deep)}
+.otp-input input:focus{border-color:var(--maroon)}
+.toast{position:fixed;bottom:30px;right:30px;background:var(--maroon-deep);color:#fff;padding:14px 22px;border-radius:12px;font-size:14px;z-index:9999;animation:toastIn .3s ease;box-shadow:0 8px 30px rgba(0,0,0,.3);max-width:300px}
+.toast.success{background:#15803D}
+.toast.error{background:#B91C1C}
+@keyframes toastIn{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+
+/* ── PROFILE DETAIL MODAL ── */
+.profile-detail-modal .modal{max-width:640px}
+.detail-photo{height:200px;display:flex;align-items:center;justify-content:center;border-radius:16px;margin-bottom:20px;position:relative}
+.detail-initials{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:600;opacity:.4}
+.detail-badges{position:absolute;top:12px;right:12px;display:flex;flex-direction:column;gap:6px}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.detail-field label{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:3px}
+.detail-field span{font-size:14px;color:var(--text)}
+.detail-section-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--maroon);border-bottom:1px solid var(--cream-dark);padding-bottom:8px;margin:20px 0 14px}
+.locked-contact{background:var(--gold-pale);border:1px dashed var(--gold);border-radius:12px;padding:16px;text-align:center}
+.locked-contact p{font-size:13px;color:var(--text-muted);margin-bottom:10px}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── NOTICE BAR ── */
+.demo-notice{background:linear-gradient(90deg,var(--gold),#B8832A);color:#fff;text-align:center;padding:10px;font-size:13px;font-weight:500;position:relative;z-index:101}
+.demo-notice strong{font-weight:700}
 </style>
 </head>
 <body>
-<div class="aurora"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
-<div class="z">
 
-<!-- DEMO BAR -->
-<div class="dbar"><strong>✦ DEMO VERSION</strong> — Vani Milan Matrimonial Platform &nbsp;·&nbsp; Sample data only &nbsp;·&nbsp; <strong>Client approval before full launch</strong></div>
+<!-- Demo Notice -->
+<div class="demo-notice">
+  <strong>🎨 DEMO VERSION</strong> — Vani Milan Matrimonial Platform · All data is sample only · 
+  <strong>For approval before full launch</strong>
+</div>
 
-<!-- NAVBAR -->
-<nav class="nav">
-  <div class="nav-in">
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-inner">
     <a href="#" class="logo">
-      <div class="lmark">♥</div>
-      <div><span class="lname">Vani Milan</span><span class="lsub">Vaishya Vani Matrimony</span></div>
+      <div class="logo-icon">❤</div>
+      <div>
+        <span class="logo-text">Vani Milan</span>
+        <span class="logo-sub">VAISHYA VANI MATRIMONY</span>
+      </div>
     </a>
-    <div class="nl">
-      <a href="#profiles">Browse</a><a href="#stories">Stories</a>
-      <a href="#membership">Plans</a><a href="#events">Events</a>
-      <a href="#horoscope" style="color:#FCD34D">🔮 Horoscope</a>
-      <a href="#process">How it works</a>
+    <div class="nav-links">
+      <a href="#profiles">Browse Profiles</a>
+      <a href="#stories">Success Stories</a>
+      <a href="#membership">Membership</a>
+      <a href="#events">Events</a>
+      <a href="#process">How It Works</a>
     </div>
-    <div class="nc">
-      <button class="btn btn-g btn-sm" onclick="openM('login')">Login</button>
-      <button class="btn btn-p btn-sm" onclick="openM('register')">Register Free →</button>
+    <div class="nav-cta">
+      <button class="btn btn-outline" onclick="openModal('login')" style="padding:10px 20px;font-size:14px">Login</button>
+      <button class="btn btn-primary" onclick="openModal('register')" style="padding:10px 20px;font-size:14px">Register Free</button>
     </div>
-    <div class="hb" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
-<div class="mn" id="mobileNav">
-  <a href="#profiles" onclick="toggleNav()">Browse Profiles</a>
-  <a href="#stories" onclick="toggleNav()">Success Stories</a>
-  <a href="#membership" onclick="toggleNav()">Membership Plans</a>
-  <a href="#events" onclick="toggleNav()">Events</a>
-  <a href="#horoscope" onclick="toggleNav()" style="color:#FCD34D">🔮 Horoscope Checker</a>
-  <a href="#process" onclick="toggleNav()">How It Works</a>
-  <div class="mb"><button class="btn btn-g" style="flex:1" onclick="toggleNav();openM('login')">Login</button><button class="btn btn-p" style="flex:1" onclick="toggleNav();openM('register')">Register</button></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#profiles" onclick="toggleMenu()">Browse Profiles</a>
+  <a href="#stories" onclick="toggleMenu()">Success Stories</a>
+  <a href="#membership" onclick="toggleMenu()">Membership</a>
+  <a href="#events" onclick="toggleMenu()">Events</a>
+  <a href="#process" onclick="toggleMenu()">How It Works</a>
+  <div class="btns">
+    <button class="btn btn-outline" onclick="toggleMenu();openModal('login')" style="flex:1;justify-content:center;padding:10px">Login</button>
+    <button class="btn btn-primary" onclick="toggleMenu();openModal('register')" style="flex:1;justify-content:center;padding:10px">Register</button>
+  </div>
 </div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="w">
-    <div class="hi">
-      <div>
-        <div class="hkicker"><span class="hdot">✦</span>Exclusively for Vaishya Vani Community</div>
-        <h1>Find Your Perfect<br><em>Life Partner</em><br>Within Community</h1>
-        <p class="hdesc">A trusted, verified, family-oriented matrimonial platform built exclusively for the Vaishya Vani community. No random chats — only meaningful connections.</p>
-        <div class="hact">
-          <button class="btn btn-p" onclick="openM('register')">♥ Register Free — It's Free</button>
-          <a href="#profiles" class="btn btn-g">Browse Profiles</a>
-        </div>
-        <div class="hsp">
-          <div class="avs"><span>P</span><span>R</span><span>A</span><span style="width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);margin-left:-7px;background:linear-gradient(135deg,var(--rose3),var(--purple));display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">+</span></div>
-          <p class="ptext"><strong>5,000+ verified profiles</strong><br>across India</p>
-        </div>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="container hero-content">
+    <div>
+      <div class="hero-badge">Exclusively for Vaishya Vani Community</div>
+      <h1>Find Your Perfect<br><span>Life Partner</span><br>Within Community</h1>
+      <p class="hero-desc">A trusted, verified, family-oriented matrimonial platform built exclusively for the Vaishya Vani community. No random chats — only meaningful connections.</p>
+      <div class="hero-actions">
+        <button class="btn btn-gold" onclick="openModal('register')">
+          ❤ Register Free
+        </button>
+        <a href="#profiles" class="btn" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.3)">
+          🔍 Browse Profiles
+        </a>
       </div>
-      <div class="hr">
-        <div class="hsr">
-          <div class="hsc"><span class="snum">5K+</span><span class="slbl">Verified Profiles</span></div>
-          <div class="hsc"><span class="snum">800+</span><span class="slbl">Matches Made</span></div>
-          <div class="hsc"><span class="snum">100%</span><span class="slbl">Community Only</span></div>
-        </div>
-        <div class="hfc">
-          <div class="fc"><div class="fci" style="background:rgba(225,29,72,.1)">🛡️</div><h4>Admin Verified</h4><p>Every profile reviewed by community admins before going live</p></div>
-          <div class="fc"><div class="fci" style="background:rgba(245,158,11,.1)">👨‍👩‍👧</div><h4>Family First</h4><p>Platform designed for family-to-family connections, not dating</p></div>
-          <div class="fc"><div class="fci" style="background:rgba(124,58,237,.1)">🔒</div><h4>Zero Random Chat</h4><p>Interest-based — your privacy and dignity fully protected</p></div>
-          <div class="fc"><div class="fci" style="background:rgba(34,197,94,.1)">✨</div><h4>Community Trust</h4><p>Exclusively for Vaishya Vani samaj with Gothra/Kul matching</p></div>
-        </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-num">5,000+</span><span class="stat-label">Verified Profiles</span></div>
+        <div class="stat-item"><span class="stat-num">800+</span><span class="stat-label">Matches Made</span></div>
+        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Community Only</span></div>
       </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card"><div class="hero-card-icon">🛡️</div><h4>Verified Profiles</h4><p>Every profile manually approved by community admins</p></div>
+      <div class="hero-card"><div class="hero-card-icon">👨‍👩‍👧</div><h4>Family First</h4><p>Designed for family-to-family connections</p></div>
+      <div class="hero-card"><div class="hero-card-icon">🔒</div><h4>No Random Chat</h4><p>Interest-based connections — your privacy respected</p></div>
+      <div class="hero-card"><div class="hero-card-icon">✨</div><h4>Community Trust</h4><p>Exclusively for the Vaishya Vani samaj</p></div>
     </div>
   </div>
 </section>
 
 <!-- SEARCH -->
-<div class="sw z">
-  <div class="w">
+<section class="search-section">
+  <div class="container">
     <div style="text-align:center;margin-bottom:28px">
-      <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Find Your Match</p>
-      <h2 style="font-family:'DM Serif Display',serif;font-size:1.9rem;letter-spacing:-.025em">Search from verified profiles</h2>
+      <h2 style="font-size:2rem;color:var(--maroon-deep)">Search Your Match</h2>
+      <p style="color:var(--text-muted);font-size:15px;margin-top:6px">Filter from thousands of verified Vaishya Vani profiles</p>
     </div>
-    <div class="spill">
-      <button class="pill on" id="pb" onclick="setPill('b')">👩 Bride</button>
-      <button class="pill" id="pg2" onclick="setPill('g')">👨 Groom</button>
-    </div>
-    <div class="sflds">
-      <div><div class="iw" style="margin:0"><label>Age From</label><select class="inp"><script>for(let i=18;i<=55;i++)document.write(`<option${i===21?' selected':''}>${i}</option>`)</script></select></div></div>
-      <div><div class="iw" style="margin:0"><label>Age To</label><select class="inp"><script>for(let i=18;i<=55;i++)document.write(`<option${i===35?' selected':''}>${i}</option>`)</script></select></div></div>
-      <div><div class="iw" style="margin:0"><label>City</label><select class="inp"><option>Any City</option><option>Mumbai</option><option>Pune</option><option>Ahmedabad</option><option>Surat</option><option>Jaipur</option><option>Indore</option><option>Delhi</option></select></div></div>
-      <div><div class="iw" style="margin:0"><label>Education</label><select class="inp"><option>Any</option><option>Graduate</option><option>Post Graduate</option><option>PhD</option><option>CA/CS</option></select></div></div>
-      <div><div class="iw" style="margin:0"><label>Profession</label><select class="inp"><option>Any</option><option>Business</option><option>Engineer</option><option>Doctor</option><option>CA/CS</option></select></div></div>
-      <div class="sgo"><button class="btn btn-p" style="width:100%;border-radius:11px;padding:12px 18px" onclick="doSearch()">Search →</button></div>
-    </div>
-  </div>
-</div>
-
-<!-- WHY -->
-<section class="sec" id="why">
-  <div class="w">
-    <div class="text-center rev" style="margin-bottom:52px;text-align:center">
-      <div class="ey">Why Vani Milan</div>
-      <h2 class="st" style="text-align:center">Built different, for your <em>community</em></h2>
-    </div>
-    <div class="wg rev">
-      <div class="wc"><span class="wi">🏘️</span><h3>Community Only</h3><p>Exclusively for Vaishya Vani members. Every profile belongs to your samaj — no outsiders, guaranteed.</p></div>
-      <div class="wc"><span class="wi">✅</span><h3>Verified Profiles</h3><p>Every profile manually reviewed by community admins. Fake profiles blocked before they reach you.</p></div>
-      <div class="wc"><span class="wi">🔒</span><h3>No Random Chat</h3><p>Privacy-first. No DMs, no random messages. Connections only through mutual interest acceptance.</p></div>
-      <div class="wc"><span class="wi">👨‍👩‍👧‍👦</span><h3>Family First</h3><p>Designed for family-to-family matchmaking. Parents and guardians are equal stakeholders.</p></div>
-      <div class="wc"><span class="wi">💝</span><h3>Traditional Values</h3><p>Gothra, Kul, Samaj sub-groups, Horoscope matching — all built natively into the platform.</p></div>
-      <div class="wc"><span class="wi">⭐</span><h3>Premium Experience</h3><p>Clean, distraction-free platform with the dignity and respect this sacred journey deserves.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="gd"></div>
-
-<!-- PROFILES -->
-<section class="sec" id="profiles">
-  <div class="w">
-    <div class="rev" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:18px">
-      <div><div class="ey" style="justify-content:flex-start">Featured Profiles</div><h2 class="st" style="margin-bottom:0">Verified members<br>of your community</h2></div>
-      <button class="btn btn-g" onclick="toast('Full database available after launch!')">View all profiles →</button>
-    </div>
-    <div class="pg rev" id="profilesGrid"></div>
-  </div>
-</section>
-
-<div class="gd"></div>
-
-<!-- STORIES -->
-<section class="stband" id="stories">
-  <div class="w">
-    <div style="text-align:center;margin-bottom:52px" class="rev">
-      <div class="ey">Success Stories</div>
-      <h2 class="st" style="text-align:center">Real couples, <em>real love</em></h2>
-      <p class="ss" style="margin:0 auto;text-align:center">Families who trusted Vani Milan to find their life partner</p>
-    </div>
-    <div class="stg rev">
-      <div class="stc"><div class="stq">❝</div><p class="stt">"We found each other through Vani Milan and our families connected immediately. The admin-verified profiles gave us complete confidence. Eternally grateful!"</p><div class="stcp"><div class="stav">R</div><div><div class="stn">Ravi & Priya Sharma</div><div class="stl">Pune · Married 2024</div></div></div></div>
-      <div class="stc"><div class="stq">❝</div><p class="stt">"Being from the same Vani community made our bond instant. The privacy features made us feel completely safe throughout the entire process."</p><div class="stcp"><div class="stav">S</div><div><div class="stn">Sanjay & Neha Jain</div><div class="stl">Mumbai · Married 2023</div></div></div></div>
-      <div class="stc"><div class="stq">❝</div><p class="stt">"Found our match in just 2 months. No fake profiles, no random people — only genuine Vani families with verified backgrounds. Highly recommend!"</p><div class="stcp"><div class="stav">D</div><div><div class="stn">Deepak & Aarti Agarwal</div><div class="stl">Ahmedabad · Married 2024</div></div></div></div>
+    <div class="search-box">
+      <div class="gender-toggle">
+        <button class="gender-btn active" id="gbride" onclick="setGender('bride')">👩 I'm looking for a Bride</button>
+        <button class="gender-btn" id="ggroom" onclick="setGender('groom')">👨 I'm looking for a Groom</button>
+      </div>
+      <div class="search-grid">
+        <div class="search-field">
+          <label>Age From</label>
+          <select id="ageFrom">
+            <option value="">18</option>
+            <script>for(let i=18;i<=55;i++)document.write(`<option>${i}</option>`)</script>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Age To</label>
+          <select id="ageTo">
+            <script>for(let i=18;i<=55;i++)document.write(`<option${i===35?' selected':''}>${i}</option>`)</script>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>City</label>
+          <select>
+            <option>Any City</option>
+            <option>Mumbai</option><option>Pune</option><option>Ahmedabad</option>
+            <option>Surat</option><option>Jaipur</option><option>Indore</option>
+            <option>Delhi</option><option>Nagpur</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Education</label>
+          <select>
+            <option>Any</option><option>Graduate</option><option>Post Graduate</option>
+            <option>PhD</option><option>CA/CS</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Profession</label>
+          <select>
+            <option>Any</option><option>Business</option><option>Service/Job</option>
+            <option>Doctor</option><option>Engineer</option><option>CA/CS</option>
+          </select>
+        </div>
+        <div class="search-btn-wrap">
+          <button class="btn btn-primary" style="width:100%;justify-content:center;padding:12px" onclick="doSearch()">🔍 Search</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="gd"></div>
+<!-- WHY CHOOSE US -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">Our Difference</div>
+      <h2 class="section-title">Why Vani Milan?</h2>
+      <p class="section-sub">A platform that puts community trust, verified profiles, and family values at the centre</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card"><div class="why-icon">🏘️</div><h3>Community Only</h3><p>Exclusively for Vaishya Vani community members. Every profile belongs to your samaj — no outsiders, guaranteed.</p></div>
+      <div class="why-card"><div class="why-icon">✅</div><h3>Verified Profiles</h3><p>Every profile is manually reviewed and verified by community admins. Fake profiles are blocked before they reach you.</p></div>
+      <div class="why-card"><div class="why-icon">🔒</div><h3>No Random Chat</h3><p>Privacy-first platform. No DMs, no random messages. Connections happen only through mutual interest acceptance.</p></div>
+      <div class="why-card"><div class="why-icon">👨‍👩‍👧‍👦</div><h3>Family First</h3><p>Designed for family-to-family matchmaking. Parents and guardians are equal stakeholders in the process.</p></div>
+      <div class="why-card"><div class="why-icon">💝</div><h3>Traditional Values</h3><p>Upholds community customs — Gothra, Kul, Samaj sub-groups, Horoscope matching — all built in.</p></div>
+      <div class="why-card"><div class="why-icon">⭐</div><h3>Premium Experience</h3><p>Clean, elegant, distraction-free platform designed for the respect and dignity this journey deserves.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROFILES -->
+<section class="profiles-section" id="profiles">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">Browse Profiles</div>
+      <h2 class="section-title">Featured Profiles</h2>
+      <p class="section-sub">Verified profiles from the Vaishya Vani community. Premium members get priority visibility.</p>
+    </div>
+    <div class="profiles-grid reveal" id="profilesGrid"></div>
+    <div style="text-align:center;margin-top:40px">
+      <button class="btn btn-outline" onclick="showAllProfiles()">View All Profiles →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="stories-section" id="stories">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:48px">
+      <div class="section-tag" style="background:rgba(201,151,58,.2);color:var(--gold-light)">Success Stories</div>
+      <h2 class="section-title" style="color:#fff">Happy Couples 💑</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,.6)">Real couples who found their life partner through Vani Milan</p>
+    </div>
+    <div class="stories-grid reveal">
+      <div class="story-card"><div class="story-quote">❝</div><p class="story-text">"We found each other through Vani Milan and our families connected immediately. The admin-verified profiles gave us complete confidence. Eternally grateful!"</p><div class="story-couple"><div class="story-avatar">R</div><div><div class="story-names">Ravi & Priya Sharma</div><div class="story-city">Pune · Married 2024</div></div></div></div>
+      <div class="story-card"><div class="story-quote">❝</div><p class="story-text">"Being from the same Vani community made our bond instant. Our families bonded over shared values. The privacy features made us feel completely safe throughout."</p><div class="story-couple"><div class="story-avatar">S</div><div><div class="story-names">Sanjay & Neha Jain</div><div class="story-city">Mumbai · Married 2023</div></div></div></div>
+      <div class="story-card"><div class="story-quote">❝</div><p class="story-text">"Found our match in 2 months. No fake profiles, no random people — just genuine Vani families. The interest system is perfectly designed for traditional matchmaking."</p><div class="story-couple"><div class="story-avatar">D</div><div><div class="story-names">Deepak & Aarti Agarwal</div><div class="story-city">Ahmedabad · Married 2024</div></div></div></div>
+    </div>
+  </div>
+</section>
 
 <!-- MEMBERSHIP -->
-<section class="sec" id="membership">
-  <div class="w">
-    <div style="text-align:center;margin-bottom:52px" class="rev">
-      <div class="ey">Pricing</div>
-      <h2 class="st" style="text-align:center">Simple, transparent <em>pricing</em></h2>
-      <p class="ss" style="margin:0 auto;text-align:center">Start free — upgrade when ready. No hidden charges, no surprises.</p>
+<section class="membership-section" id="membership">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">Pricing</div>
+      <h2 class="section-title">Simple, Transparent Plans</h2>
+      <p class="section-sub">Start free — upgrade when you're ready. No hidden charges.</p>
     </div>
-    <div class="plr rev">
-      <div class="pl">
-        <div class="ph"><div class="pname">Free</div><div class="ppw"><span class="pamt">₹0</span><span class="pper">/forever</span></div></div>
-        <div class="pb2"><ul class="pf"><li>Create profile</li><li>Browse 10 profiles/day</li><li>Send 5 interests/month</li><li>Basic search filters</li><li class="no">Contact unlock</li><li class="no">Priority listing</li><li class="no">Featured profile</li></ul></div>
-        <div class="pft"><button class="btn btn-g" style="width:100%;border-radius:11px" onclick="openM('register')">Get Started Free</button></div>
+    <div class="plans-grid reveal">
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-name">Free</div>
+          <div class="plan-price"><span class="plan-amount">₹0</span><span class="plan-period">/forever</span></div>
+        </div>
+        <div class="plan-body">
+          <ul class="plan-features">
+            <li>Create profile</li>
+            <li>Browse 10 profiles/day</li>
+            <li>Send 5 interests/month</li>
+            <li>Basic search filters</li>
+            <li class="no">Contact unlock</li>
+            <li class="no">Priority listing</li>
+            <li class="no">Featured profile</li>
+          </ul>
+        </div>
+        <div class="plan-cta"><button class="btn btn-outline" style="width:100%;justify-content:center" onclick="openModal('register')">Get Started Free</button></div>
       </div>
-      <div class="pl feat">
-        <div class="ph fh"><div class="pp2">✦ Most Popular</div><div class="pname">Premium</div><div class="ppw"><span class="pamt">₹999</span><span class="pper">/3 months</span></div></div>
-        <div class="pb2"><ul class="pf"><li>Everything in Free</li><li>Unlimited profile views</li><li>Unlimited interests</li><li>Contact number unlock</li><li>Priority search listing</li><li>Featured profile badge</li><li>Biodata PDF download</li></ul></div>
-        <div class="pft"><button class="btn btn-p" style="width:100%;border-radius:11px" onclick="toast('Premium available after full launch! 🚀')">Upgrade to Premium →</button></div>
+      <div class="plan-card popular">
+        <div class="plan-header premium-header">
+          <div class="plan-popular-badge">✦ Most Popular</div>
+          <div class="plan-name white">Premium</div>
+          <div class="plan-price"><span class="plan-amount white">₹999</span><span class="plan-period white">/3 months</span></div>
+        </div>
+        <div class="plan-body">
+          <ul class="plan-features">
+            <li>Everything in Free</li>
+            <li>Unlimited profile views</li>
+            <li>Unlimited interests</li>
+            <li>Contact number unlock</li>
+            <li>Priority search listing</li>
+            <li>Featured profile badge</li>
+            <li>Biodata PDF download</li>
+          </ul>
+        </div>
+        <div class="plan-cta"><button class="btn btn-gold" style="width:100%;justify-content:center" onclick="showToast('Premium plan — available after full launch! 🚀')">Upgrade to Premium ↗</button></div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="gd"></div>
 
 <!-- EVENTS -->
-<section class="sec" id="events">
-  <div class="w">
-    <div class="rev" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:18px">
-      <div><div class="ey" style="justify-content:flex-start">Community Events</div><h2 class="st" style="margin-bottom:0">Meet families,<br>in person</h2></div>
-      <span class="tag tag-a">3 Upcoming Events</span>
+<section class="events-section" id="events">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">Community Events</div>
+      <h2 class="section-title">Upcoming Events</h2>
+      <p class="section-sub">Matrimonial meetups, Samaj events, and youth gatherings — meet families in person</p>
     </div>
-    <div class="evg rev">
-      <div class="evc"><div class="evh"><span class="tag tag-r">Matrimonial Meet</span><div class="evtt">Vani Matrimonial Sammelan 2025</div></div><div class="evb"><div class="evdt"><span>📅</span>March 15, 2025</div><div class="evdt"><span>📍</span>Pune, Maharashtra</div><div class="evdt"><span>👥</span>200+ families expected</div><div class="evbtn" onclick="toast('RSVP registered! Details sent to mobile 📱')">Register for Event</div></div></div>
-      <div class="evc"><div class="evh"><span class="tag tag-v">Youth Gathering</span><div class="evtt">Vaishya Vani Youth Connect 2025</div></div><div class="evb"><div class="evdt"><span>📅</span>April 5, 2025</div><div class="evdt"><span>📍</span>Mumbai, Maharashtra</div><div class="evdt"><span>👥</span>150+ youth expected</div><div class="evbtn" onclick="toast('RSVP registered! Details sent to mobile 📱')">Register for Event</div></div></div>
-      <div class="evc"><div class="evh"><span class="tag tag-a">Samaj Event</span><div class="evtt">Samaj Parivar Milan — Ahmedabad</div></div><div class="evb"><div class="evdt"><span>📅</span>May 20, 2025</div><div class="evdt"><span>📍</span>Ahmedabad, Gujarat</div><div class="evdt"><span>👥</span>500+ families expected</div><div class="evbtn" onclick="toast('RSVP registered! Details sent to mobile 📱')">Register for Event</div></div></div>
+    <div class="events-grid reveal">
+      <div class="event-card"><div class="event-header"><div class="event-type">Matrimonial Meet</div><div class="event-title">Vani Matrimonial Sammelan 2025</div></div><div class="event-body"><div class="event-detail"><span class="event-icon">📅</span>March 15, 2025</div><div class="event-detail"><span class="event-icon">📍</span>Pune, Maharashtra</div><div class="event-detail"><span class="event-icon">👥</span>200+ families expected</div><a class="event-rsvp" onclick="showToast('RSVP registered! Event details will be sent on your mobile. 📱');return false" href="#">Register for Event</a></div></div>
+      <div class="event-card"><div class="event-header"><div class="event-type">Youth Gathering</div><div class="event-title">Vaishya Vani Youth Connect 2025</div></div><div class="event-body"><div class="event-detail"><span class="event-icon">📅</span>April 5, 2025</div><div class="event-detail"><span class="event-icon">📍</span>Mumbai, Maharashtra</div><div class="event-detail"><span class="event-icon">👥</span>150+ youth expected</div><a class="event-rsvp" onclick="showToast('RSVP registered! Event details will be sent on your mobile. 📱');return false" href="#">Register for Event</a></div></div>
+      <div class="event-card"><div class="event-header"><div class="event-type">Samaj Event</div><div class="event-title">Samaj Parivar Milan — Ahmedabad</div></div><div class="event-body"><div class="event-detail"><span class="event-icon">📅</span>May 20, 2025</div><div class="event-detail"><span class="event-icon">📍</span>Ahmedabad, Gujarat</div><div class="event-detail"><span class="event-icon">👥</span>500+ families expected</div><a class="event-rsvp" onclick="showToast('RSVP registered! Event details will be sent on your mobile. 📱');return false" href="#">Register for Event</a></div></div>
     </div>
   </div>
 </section>
-
-<div class="gd"></div>
 
 <!-- PROCESS -->
-<section class="sec-sm" id="process">
-  <div class="w">
-    <div style="text-align:center;margin-bottom:52px" class="rev">
-      <div class="ey">How It Works</div>
-      <h2 class="st" style="text-align:center">Four steps to your<br><em>perfect match</em></h2>
+<section class="process-section" id="process">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">How It Works</div>
+      <h2 class="section-title">Simple 4-Step Process</h2>
+      <p class="section-sub">From registration to a lifelong relationship — guided every step of the way</p>
     </div>
-    <div class="procr rev">
-      <div class="prs"><div class="prn">1</div><h3>Register & Verify</h3><p>Create account, verify mobile with OTP in under 2 minutes.</p></div>
-      <div class="prs"><div class="prn">2</div><h3>Create Profile</h3><p>Fill personal, family, community, and horoscope details.</p></div>
-      <div class="prs"><div class="prn">3</div><h3>Browse & Connect</h3><p>Search profiles, send interests, await mutual acceptance.</p></div>
-      <div class="prs"><div class="prn">4</div><h3>Family Connect</h3><p>Unlock contact after mutual interest. Families connect offline.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="gd"></div>
-
-<!-- ════════════ HOROSCOPE CHECKER ════════════ -->
-<section class="sec" id="horoscope">
-  <div class="w">
-    <div style="text-align:center;margin-bottom:48px" class="rev">
-      <div class="ey">Free Tool</div>
-      <h2 class="st" style="text-align:center">Kundali & Horoscope<br><em>Checker</em></h2>
-      <p class="ss" style="margin:0 auto;text-align:center">Enter your date of birth to instantly get your Rashi, Nakshatra, Manglik status, lucky details, and compatibility guide</p>
-    </div>
-
-    <div class="horo-wrap rev">
-      <!-- INPUT CARD -->
-      <div class="horo-input-card">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
-          <span style="font-size:28px">🔮</span>
-          <div>
-            <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;letter-spacing:-.02em">Your Kundali Details</h3>
-            <p style="font-size:13px;color:var(--text3);margin-top:2px">Calculated from Vedic astrology principles</p>
-          </div>
-        </div>
-        <div class="horo-fields">
-          <div class="iw" style="margin:0">
-            <label>Date of Birth *</label>
-            <input type="date" class="inp" id="hDob" max="2010-01-01" min="1950-01-01">
-          </div>
-          <div class="iw" style="margin:0">
-            <label>Birth Time (optional)</label>
-            <input type="time" class="inp" id="hTime" placeholder="HH:MM">
-          </div>
-          <button class="btn btn-p" style="border-radius:12px;padding:12px 22px;white-space:nowrap" onclick="calcHoro()">
-            ✨ Get Horoscope
-          </button>
-        </div>
-        <p style="font-size:11px;color:var(--text3);margin-top:14px;text-align:center">
-          🔒 Your data stays on your device. Nothing is stored or shared.
-        </p>
-      </div>
-
-      <!-- RESULT -->
-      <div class="horo-result" id="horoResult">
-
-        <!-- Rashi Hero -->
-        <div class="rashi-hero">
-          <span class="rashi-symbol" id="hSymbol">♈</span>
-          <div class="rashi-name" id="hRashiName">Mesh</div>
-          <div class="rashi-eng" id="hRashiEng">Aries</div>
-          <span class="rashi-elem" id="hElem">🔥 Fire Sign</span>
-        </div>
-
-        <!-- Core Details Grid -->
-        <div class="horo-grid">
-          <div class="horo-card">
-            <span class="horo-card-icon">⭐</span>
-            <div class="horo-card-label">Nakshatra</div>
-            <div class="horo-card-val" id="hNak">Ashwini</div>
-            <div class="horo-card-sub" id="hNakPada">Pada 1</div>
-          </div>
-          <div class="horo-card">
-            <span class="horo-card-icon">🌙</span>
-            <div class="horo-card-label">Charan / Pada</div>
-            <div class="horo-card-val" id="hCharan">1st Pada</div>
-            <div class="horo-card-sub" id="hLord">Lord: Ketu</div>
-          </div>
-          <div class="horo-card">
-            <span class="horo-card-icon">🔴</span>
-            <div class="horo-card-label">Manglik Status</div>
-            <div class="horo-card-val manglik-no" id="hManglik">Non-Manglik</div>
-            <div class="horo-card-sub" id="hMangSub">Mars well placed</div>
-          </div>
-          <div class="horo-card">
-            <span class="horo-card-icon">🐂</span>
-            <div class="horo-card-label">Nadi</div>
-            <div class="horo-card-val" id="hNadi">Aadi Nadi</div>
-            <div class="horo-card-sub">For compatibility</div>
-          </div>
-          <div class="horo-card">
-            <span class="horo-card-icon">🏷️</span>
-            <div class="horo-card-label">Gana</div>
-            <div class="horo-card-val" id="hGana">Deva Gana</div>
-            <div class="horo-card-sub" id="hGanaSub">Gentle nature</div>
-          </div>
-          <div class="horo-card">
-            <span class="horo-card-icon">🌿</span>
-            <div class="horo-card-label">Varna</div>
-            <div class="horo-card-val" id="hVarna">Brahmin</div>
-            <div class="horo-card-sub">Spiritual path</div>
-          </div>
-        </div>
-
-        <!-- Gunas / Compatibility Score -->
-        <div class="compat-bar">
-          <h4>Guna Milan Score (out of 36)</h4>
-          <div id="gunaBars"></div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
-            <p style="font-size:13px;color:var(--text2)">Your Kundali Milan score</p>
-            <span style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--amber)" id="gunaTotal">28</span>
-          </div>
-        </div>
-
-        <!-- Lucky Details -->
-        <div class="lucky-row">
-          <h4>Lucky Details</h4>
-          <div class="lucky-items" id="luckyItems"></div>
-        </div>
-
-        <!-- Compatible Signs -->
-        <div class="compat-bar">
-          <h4>Compatible Rashis for Marriage</h4>
-          <div class="compat-signs" id="compatSigns"></div>
-          <div style="margin-top:12px">
-            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Less Compatible</p>
-            <div class="compat-signs" id="incompatSigns"></div>
-          </div>
-        </div>
-
-        <!-- Personality Traits -->
-        <div class="lucky-row">
-          <h4>Your Personality Traits</h4>
-          <div class="trait-list" id="traitList"></div>
-        </div>
-
-        <!-- CTA -->
-        <div class="horo-cta">
-          <p>📋 Save this horoscope report to your matrimonial profile and let families see your Kundali details automatically during match-finding.</p>
-          <button class="btn btn-p" style="border-radius:12px" onclick="openM('register')">
-            ♥ Create Profile & Save Horoscope
-          </button>
-        </div>
-      </div>
+    <div class="process-steps reveal">
+      <div class="step-item"><div class="step-num">1</div><span class="step-icon">📱</span><div class="step-title">Register & Verify</div><p class="step-desc">Create account, verify mobile with OTP. Takes 2 minutes.</p></div>
+      <div class="step-item"><div class="step-num">2</div><span class="step-icon">👤</span><div class="step-title">Create Profile</div><p class="step-desc">Fill detailed profile — personal, family, community, horoscope details.</p></div>
+      <div class="step-item"><div class="step-num">3</div><span class="step-icon">🔍</span><div class="step-title">Browse & Connect</div><p class="step-desc">Search profiles, send interests. Await mutual acceptance.</p></div>
+      <div class="step-item"><div class="step-num">4</div><span class="step-icon">💑</span><div class="step-title">Family Connect</div><p class="step-desc">Unlock contact after mutual interest. Families connect offline.</p></div>
     </div>
   </div>
 </section>
-
-<div class="gd"></div>
 
 <!-- TESTIMONIALS -->
-<section class="sec">
-  <div class="w">
-    <div style="text-align:center;margin-bottom:44px" class="rev">
-      <div class="ey">Testimonials</div>
-      <h2 class="st" style="text-align:center">Trusted by thousands<br>of Vani families</h2>
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">Testimonials</div>
+      <h2 class="section-title">What Members Say</h2>
+      <p class="section-sub">Trusted by thousands of Vaishya Vani families across India</p>
     </div>
-    <div class="teg rev">
-      <div class="tec"><div class="test">★★★★★</div><p class="tet">"Excellent platform for our community. Profiles are genuine and verified. Found a great match for my daughter within just 3 months."</p><div class="tea">Ramesh Agarwal</div><div class="ter">Parent of Bride · Pune</div></div>
-      <div class="tec"><div class="test">★★★★★</div><p class="tet">"Very easy to use. The privacy features are excellent — I felt completely safe. No random messages, only serious families."</p><div class="tea">Sunita Jain</div><div class="ter">Marriage Seeker · Mumbai</div></div>
-      <div class="tec"><div class="test">★★★★★</div><p class="tet">"Community-specific platform with great features. The Gothra and Kul matching filters are unique. Highly recommend!"</p><div class="tea">Mahesh Gupta</div><div class="ter">Parent of Groom · Surat</div></div>
+    <div class="testi-grid reveal">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Excellent platform for our community. Profiles are genuine and verified. Found a great match for my daughter within just 3 months. Admin support is very helpful."</p><div class="testi-author">Ramesh Agarwal</div><div class="testi-role">Parent of Bride · Pune</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Very easy to use. The privacy features are excellent — I felt completely safe. No random messages, only serious families. This is exactly what our community needed."</p><div class="testi-author">Sunita Jain</div><div class="testi-role">Marriage Seeker · Mumbai</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Community-specific platform with great features. The Gothra and Kul matching filters are unique. Admin verification gives full confidence in the profiles."</p><div class="testi-author">Mahesh Gupta</div><div class="testi-role">Parent of Groom · Surat</div></div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="foot">
-  <div class="w">
-    <div class="fg">
-      <div class="fbrand">
-        <a href="#" class="logo"><div class="lmark">♥</div><span class="lname">Vani Milan</span></a>
-        <p class="fd">Trusted matrimonial platform exclusively for the Vaishya Vani community. Verified profiles, family values, genuine connections.</p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon" style="margin-right:10px">❤</div><span class="logo-text" style="color:#fff">Vani Milan</span></div>
+        <p>Trusted matrimonial platform exclusively for the Vaishya Vani community. Verified profiles, family values, genuine connections.</p>
       </div>
-      <div class="fc2"><h4>Platform</h4><a href="#profiles">Browse Profiles</a><a href="#" onclick="openM('register');return false">Register Free</a><a href="#stories">Success Stories</a><a href="#membership">Membership</a><a href="#events">Events</a></div>
-      <div class="fc2"><h4>Support</h4><a href="#">Help Center</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact Us</a><a href="#">FAQ</a></div>
-      <div class="fc2"><h4>Contact</h4><a href="#">📞 +91 98765 43210</a><a href="#">✉ support@vanimilan.com</a><a href="#">📍 Vaishya Vani Bhavan, Pune</a></div>
+      <div class="footer-col"><h4>Platform</h4><a href="#profiles">Browse Profiles</a><a href="#" onclick="openModal('register');return false">Register Free</a><a href="#stories">Success Stories</a><a href="#membership">Membership</a><a href="#events">Events</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="#">Help Center</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact Us</a><a href="#">FAQ</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="#">📞 +91 98765 43210</a><a href="#">✉ support@vanimilan.com</a><a href="#">📍 Vaishya Vani Bhavan, Pune</a></div>
     </div>
-    <div class="fb"><span>© 2025 Vani Milan. All rights reserved.</span><span>Made with ♥ for the Vaishya Vani Community</span></div>
+    <div class="footer-bottom">
+      <span>© 2025 Vani Milan. All rights reserved.</span>
+      <span>Made with ❤️ for the Vaishya Vani Community</span>
+    </div>
   </div>
 </footer>
-</div>
 
-<!-- AUTH MODAL -->
-<div class="mbg" id="authModal">
-  <div class="mbox">
-    <div class="mh"><h2 id="mTitle">Welcome back</h2><button class="mx" onclick="closeM('authModal')">✕</button></div>
-    <div class="mb2">
-      <div class="mts" id="mTabs"><div class="mt on" onclick="mTab('login')">Login</div><div class="mt" onclick="mTab('register')">Register Free</div></div>
-      <!-- LOGIN -->
-      <div id="fL">
-        <div class="iw"><label>Mobile / Email</label><input type="text" class="inp" placeholder="Enter mobile or email" id="lId"></div>
-        <div class="iw"><label>Password</label><input type="password" class="inp" placeholder="Enter password" id="lPw"></div>
-        <div style="text-align:right;margin-bottom:16px"><a class="fl" style="font-size:12px" onclick="toast('Reset OTP will be sent to your mobile 📱')">Forgot password?</a></div>
-        <button class="btn btn-p" style="width:100%;border-radius:11px;padding:13px" onclick="doLogin()">Login →</button>
-        <div class="fdiv"><span></span><p>or login with OTP</p><span></span></div>
-        <button class="btn btn-g" style="width:100%;border-radius:11px;padding:13px" onclick="showOL()">📱 Login with OTP</button>
+<!-- LOGIN / REGISTER MODAL -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Welcome Back</h2>
+      <button class="modal-close" onclick="closeModal('authModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" id="modalTabs">
+        <div class="modal-tab active" onclick="switchTab('login')">Login</div>
+        <div class="modal-tab" onclick="switchTab('register')">Register Free</div>
       </div>
-      <!-- OTP LOGIN -->
-      <div id="fOL" style="display:none">
-        <div class="iw"><label>Mobile Number</label>
-          <div style="display:flex;gap:8px"><input type="tel" class="inp" style="flex:1" placeholder="10-digit mobile" id="olM" maxlength="10"><button class="btn btn-g btn-sm" onclick="sendOTP()" style="border-radius:9px;white-space:nowrap">Send OTP</button></div>
+
+      <!-- LOGIN FORM -->
+      <div id="loginForm">
+        <div class="form-group">
+          <label>Mobile / Email</label>
+          <input type="text" placeholder="Enter mobile or email" id="loginId">
         </div>
-        <div id="oSec" style="display:none">
-          <p class="fn">OTP sent! &nbsp;<strong style="color:var(--amber)">Demo OTP: 123456</strong></p>
-          <div class="orow"><input type="text" maxlength="1" oninput="oNext(this,0,'lo')"><input type="text" maxlength="1" oninput="oNext(this,1,'lo')"><input type="text" maxlength="1" oninput="oNext(this,2,'lo')"><input type="text" maxlength="1" oninput="oNext(this,3,'lo')"><input type="text" maxlength="1" oninput="oNext(this,4,'lo')"><input type="text" maxlength="1" oninput="oNext(this,5,'lo')"></div>
-          <button class="btn btn-p" style="width:100%;border-radius:11px;padding:13px;margin-top:4px" onclick="verOTP('login')">Verify & Login →</button>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter password" id="loginPass">
         </div>
-        <div style="text-align:center;margin-top:12px"><a class="fl" style="font-size:12px;color:var(--text3)" onclick="showPL()">← Use password instead</a></div>
+        <div style="text-align:right;margin-bottom:18px"><a href="#" style="font-size:13px;color:var(--maroon);text-decoration:none" onclick="showForgotPassword()">Forgot Password?</a></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doLogin()">Login →</button>
+        <div style="text-align:center;margin-top:16px;font-size:13px;color:var(--text-muted)">Or login with OTP &nbsp;<a href="#" style="color:var(--maroon)" onclick="showOtpLogin()">Click here</a></div>
       </div>
-      <!-- REGISTER -->
-      <div id="fR" style="display:none">
-        <div class="iw" style="margin-bottom:8px"><label>Registering for</label></div>
-        <div class="rfo" style="margin-bottom:16px">
-          <button class="rfb on" id="rf-self" onclick="setRF('self')">Myself</button>
-          <button class="rfb" id="rf-son" onclick="setRF('son')">My Son</button>
-          <button class="rfb" id="rf-daughter" onclick="setRF('daughter')">My Daughter</button>
+
+      <!-- OTP LOGIN FORM -->
+      <div id="otpLoginForm" style="display:none">
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <div style="display:flex;gap:10px">
+            <input type="tel" placeholder="10-digit mobile" id="otpMobile" style="flex:1;padding:12px 16px;border:1.5px solid #E0D6CE;border-radius:10px;font-size:15px;outline:none">
+            <button class="btn btn-primary" style="padding:12px 16px;white-space:nowrap" onclick="sendOtp()">Send OTP</button>
+          </div>
         </div>
-        <div class="iw" style="margin-bottom:8px"><label>Profile for</label></div>
-        <div class="gtog" style="margin-bottom:16px"><div class="go on" id="gB" onclick="setGR('b')">👩 Bride</div><div class="go" id="gG" onclick="setGR('g')">👨 Groom</div></div>
-        <div class="iw"><label>Full Name *</label><input type="text" class="inp" placeholder="Full name" id="rN"></div>
-        <div class="iw"><label>Mobile Number *</label><input type="tel" class="inp" placeholder="10-digit mobile" id="rM" maxlength="10"></div>
-        <div class="iw"><label>Email Address</label><input type="email" class="inp" placeholder="your@email.com" id="rE"></div>
-        <div class="iw"><label>Password *</label><input type="password" class="inp" placeholder="Min 8 characters" id="rP"></div>
-        <button class="btn btn-p" style="width:100%;border-radius:11px;padding:13px" onclick="doReg()">Send OTP & Continue →</button>
+        <div id="otpInputSection" style="display:none">
+          <p style="text-align:center;font-size:13px;color:var(--text-muted);margin-bottom:12px">OTP sent! Enter below</p>
+          <div class="otp-input">
+            <input type="text" maxlength="1" oninput="otpNext(this,0)">
+            <input type="text" maxlength="1" oninput="otpNext(this,1)">
+            <input type="text" maxlength="1" oninput="otpNext(this,2)">
+            <input type="text" maxlength="1" oninput="otpNext(this,3)">
+            <input type="text" maxlength="1" oninput="otpNext(this,4)">
+            <input type="text" maxlength="1" oninput="otpNext(this,5)">
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" onclick="verifyOtpLogin()">Verify & Login →</button>
+        </div>
+        <div style="text-align:center;margin-top:12px"><a href="#" style="font-size:13px;color:var(--text-muted)" onclick="showPasswordLogin()">← Use password instead</a></div>
       </div>
-      <!-- OTP VERIFY -->
-      <div id="fOV" style="display:none;text-align:center">
-        <div style="font-size:48px;margin:6px 0 12px">📱</div>
-        <h3 style="font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:6px">Verify Mobile</h3>
-        <p style="font-size:12px;color:var(--text3);margin-bottom:3px">OTP sent to <strong id="rMS" style="color:var(--text)"></strong></p>
-        <p class="fn">Demo OTP: <strong style="color:var(--amber)">123456</strong></p>
-        <div class="orow"><input type="text" maxlength="1" oninput="oNext(this,0,'rv')"><input type="text" maxlength="1" oninput="oNext(this,1,'rv')"><input type="text" maxlength="1" oninput="oNext(this,2,'rv')"><input type="text" maxlength="1" oninput="oNext(this,3,'rv')"><input type="text" maxlength="1" oninput="oNext(this,4,'rv')"><input type="text" maxlength="1" oninput="oNext(this,5,'rv')"></div>
-        <button class="btn btn-p" style="width:100%;border-radius:11px;padding:13px;margin-top:8px" onclick="verOTP('register')">Verify & Create Profile →</button>
+
+      <!-- REGISTER FORM -->
+      <div id="registerForm" style="display:none">
+        <div style="display:flex;gap:8px;margin-bottom:16px">
+          <div onclick="setRegFor('self')" id="rself" class="gender-opt active" style="flex:1">Myself</div>
+          <div onclick="setRegFor('son')" id="rson" class="gender-opt" style="flex:1">My Son</div>
+          <div onclick="setRegFor('daughter')" id="rdaughter" class="gender-opt" style="flex:1">My Daughter</div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;display:block">Profile for</label>
+          <div class="gender-select">
+            <div class="gender-opt active" id="gBride" onclick="setGenderReg('bride')">👩 Bride</div>
+            <div class="gender-opt" id="gGroom" onclick="setGenderReg('groom')">👨 Groom</div>
+          </div>
+        </div>
+        <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Full name" id="regName"></div>
+        <div class="form-group"><label>Mobile Number *</label><input type="tel" placeholder="10-digit mobile" id="regMobile" maxlength="10"></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" id="regEmail"></div>
+        <div class="form-group"><label>Password *</label><input type="password" placeholder="Min 8 characters" id="regPass"></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doRegister()">Send OTP & Continue →</button>
       </div>
-      <!-- SUCCESS -->
-      <div id="fS" style="display:none;text-align:center;padding:12px 0 6px">
-        <div style="font-size:56px;margin-bottom:14px">🎉</div>
-        <h3 style="font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:8px">Welcome to Vani Milan!</h3>
-        <p style="font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:20px">Account created! In the full version you'll be directed to complete your profile.</p>
-        <button class="btn btn-a" style="border-radius:11px" onclick="closeM('authModal')">Start Exploring →</button>
+
+      <!-- OTP VERIFY (after register) -->
+      <div id="otpVerifyForm" style="display:none">
+        <div style="text-align:center;margin-bottom:20px">
+          <div style="font-size:48px;margin-bottom:12px">📱</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--maroon-deep)">Verify Mobile</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-top:6px">OTP sent to <strong id="regMobileDisplay"></strong></p>
+        </div>
+        <div class="otp-input">
+          <input type="text" maxlength="1" oninput="regOtpNext(this,0)">
+          <input type="text" maxlength="1" oninput="regOtpNext(this,1)">
+          <input type="text" maxlength="1" oninput="regOtpNext(this,2)">
+          <input type="text" maxlength="1" oninput="regOtpNext(this,3)">
+          <input type="text" maxlength="1" oninput="regOtpNext(this,4)">
+          <input type="text" maxlength="1" oninput="regOtpNext(this,5)">
+        </div>
+        <p style="font-size:11px;color:var(--text-muted);text-align:center;margin:8px 0 16px">Demo OTP: <strong style="color:var(--maroon)">123456</strong></p>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="verifyRegOtp()">Verify & Create Profile →</button>
       </div>
-      <p style="text-align:center;font-size:12px;color:var(--text3);margin-top:16px" id="mFN">New to Vani Milan? <a class="fl" onclick="mTab('register')">Register free</a></p>
+
+      <!-- SUCCESS AFTER REGISTER -->
+      <div id="successForm" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:64px;margin-bottom:16px">🎉</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--maroon-deep);margin-bottom:10px">Welcome to Vani Milan!</h3>
+        <p style="color:var(--text-muted);font-size:14px;line-height:1.7;margin-bottom:24px">Your account has been created. In the full version, you'll be redirected to fill your complete profile.</p>
+        <button class="btn btn-gold" style="justify-content:center" onclick="closeModal('authModal')">Start Exploring →</button>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- PROFILE DETAIL MODAL -->
-<div class="mbg" id="profileModal">
-  <div class="mbox wide">
-    <div class="mh"><h2 id="pdT">Profile Details</h2><button class="mx" onclick="closeM('profileModal')">✕</button></div>
-    <div class="mb2" id="pdB"></div>
+<div class="modal-overlay profile-detail-modal" id="profileModal">
+  <div class="modal" style="max-width:640px">
+    <div class="modal-header">
+      <h2 id="profileModalTitle">Profile Details</h2>
+      <button class="modal-close" onclick="closeModal('profileModal')">✕</button>
+    </div>
+    <div class="modal-body" id="profileModalBody"></div>
   </div>
 </div>
 
 <script>
-const P=[
-  {id:1,n:'Priya Sharma',g:'f',age:26,city:'Pune',st:'MH',edu:'MBA Finance',occ:'Marketing Manager',ms:'Never Married',ht:"5'4\"",got:'Kashyap',sam:'Oswal',diet:'Vegetarian',mang:'No',rashi:'Kanya',inc:'8–10 LPA',fa:'Suresh Sharma (Business)',mo:'Sunita Sharma (Homemaker)',ft:'Nuclear',np:'Indore, MP',v:true,pr:true,bg:'linear-gradient(135deg,#3B0764,#9F1239)',ab:'Simple and family-oriented person looking for a life partner within the Vani community.'},
-  {id:2,n:'Rahul Mehta',g:'m',age:29,city:'Mumbai',st:'MH',edu:'B.Tech CS',occ:'Software Engineer',ms:'Never Married',ht:"5'9\"",got:'Vatsa',sam:'Oswal',diet:'Vegetarian',mang:'No',rashi:'Mesh',inc:'15–20 LPA',fa:'Ajay Mehta (Business)',mo:'Kavita Mehta (Homemaker)',ft:'Joint',np:'Ahmedabad, GJ',v:true,pr:false,bg:'linear-gradient(135deg,#1e1b4b,#2563eb)',ab:'Tech professional with traditional values. Looking for a simple, family-oriented life partner.'},
-  {id:3,n:'Ankita Jain',g:'f',age:25,city:'Ahmedabad',st:'GJ',edu:'BCA + MBA',occ:'Business',ms:'Never Married',ht:"5'2\"",got:'Garg',sam:'Maheshwari',diet:'Jain',mang:'Partial',rashi:'Vrishabh',inc:'5–8 LPA',fa:'Rajesh Jain (Textile)',mo:'Meena Jain (Homemaker)',ft:'Joint',np:'Surat, GJ',v:true,pr:true,bg:'linear-gradient(135deg,#064E3B,#065F46)',ab:'Business family background, looking for a match who respects Jain values and traditions.'},
-  {id:4,n:'Vivek Agarwal',g:'m',age:31,city:'Surat',st:'GJ',edu:'CA',occ:'Chartered Accountant',ms:'Never Married',ht:"5'8\"",got:'Bansal',sam:'Vaishya Vani',diet:'Vegetarian',mang:'No',rashi:'Mithun',inc:'20+ LPA',fa:'Vinod Agarwal (Diamond)',mo:'Rekha Agarwal (Homemaker)',ft:'Joint',np:'Surat, GJ',v:true,pr:true,bg:'linear-gradient(135deg,#78350F,#B45309)',ab:'CA professional from a respected Vani family. Looking for a well-educated, family-oriented partner.'},
-  {id:5,n:'Pooja Khandelwal',g:'f',age:27,city:'Jaipur',st:'RJ',edu:'B.Com + LLB',occ:'Lawyer',ms:'Never Married',ht:"5'3\"",got:'Goyal',sam:'Oswal',diet:'Vegetarian',mang:'No',rashi:'Simha',inc:'8–12 LPA',fa:'Ashok Khandelwal (Advocate)',mo:'Prabha Khandelwal (Teacher)',ft:'Nuclear',np:'Jodhpur, RJ',v:false,pr:false,bg:'linear-gradient(135deg,#4C1D95,#5B21B6)',ab:'Legal professional with strong family values. Looking for a supportive partner from a good Vani family.'},
-  {id:6,n:'Nikhil Vora',g:'m',age:28,city:'Indore',st:'MP',edu:'M.Tech',occ:'Product Manager',ms:'Never Married',ht:"5'10\"",got:'Mittal',sam:'Oswal',diet:'Vegetarian',mang:'Yes',rashi:'Dhanu',inc:'12–18 LPA',fa:'Suresh Vora (Cloth Merchant)',mo:'Asha Vora (Homemaker)',ft:'Nuclear',np:'Indore, MP',v:true,pr:false,bg:'linear-gradient(135deg,#0F2040,#1D4ED8)',ab:'Tech professional in product management. Looking for an ambitious yet family-oriented partner.'},
-  {id:7,n:'Divya Gupta',g:'f',age:24,city:'Delhi',st:'DL',edu:'MBBS',occ:'Doctor',ms:'Never Married',ht:"5'5\"",got:'Singhal',sam:'Vaishya Vani',diet:'Vegetarian',mang:'No',rashi:'Karka',inc:'10–15 LPA',fa:'Naresh Gupta (Business)',mo:'Sunita Gupta (Doctor)',ft:'Nuclear',np:'Agra, UP',v:true,pr:true,bg:'linear-gradient(135deg,#134E4A,#0F766E)',ab:'Medical professional looking for a well-educated, understanding partner from the Vani community.'},
-  {id:8,n:'Arjun Bansal',g:'m',age:30,city:'Nagpur',st:'MH',edu:'MBA',occ:'Business Owner',ms:'Never Married',ht:"5'11\"",got:'Agarwal',sam:'Vaishya Vani',diet:'Vegetarian',mang:'No',rashi:'Tula',inc:'25+ LPA',fa:'Ramesh Bansal (Wholesale)',mo:'Usha Bansal (Homemaker)',ft:'Joint',np:'Nagpur, MH',v:true,pr:true,bg:'linear-gradient(135deg,#7C2D12,#C2410C)',ab:'Second-generation business family. Looking for an equally ambitious and family-oriented partner.'},
+// ── SAMPLE DATA ──
+const profiles = [
+  {id:1,name:'Priya Sharma',gender:'female',age:26,city:'Pune',state:'Maharashtra',education:'MBA Finance',occupation:'Marketing Manager',marital:'Never Married',height:"5'4\"",gothra:'Kashyap',samaj:'Oswal',diet:'Vegetarian',manglik:'No',rashi:'Kanya',income:'8-10 LPA',father:'Suresh Sharma (Business)',mother:'Sunita Sharma (Homemaker)',family:'Nuclear',native:'Indore, MP',isVerified:true,isPremium:true,bg:'from-rose-100',hobbies:'Reading, Yoga, Cooking',about:'Simple and family-oriented person looking for a life partner within the Vani community. Love cooking and spending time with family.'},
+  {id:2,name:'Rahul Mehta',gender:'male',age:29,city:'Mumbai',state:'Maharashtra',education:'B.Tech CS',occupation:'Software Engineer',marital:'Never Married',height:"5'9\"",gothra:'Vatsa',samaj:'Oswal',diet:'Vegetarian',manglik:'No',rashi:'Mesh',income:'15-20 LPA',father:'Ajay Mehta (Business)',mother:'Kavita Mehta (Homemaker)',family:'Joint',native:'Ahmedabad, Gujarat',isVerified:true,isPremium:false,bg:'from-blue-100',hobbies:'Cricket, Travel, Music',about:'Tech professional with traditional values. Looking for a simple, family-oriented life partner from the Vani community.'},
+  {id:3,name:'Ankita Jain',gender:'female',age:25,city:'Ahmedabad',state:'Gujarat',education:'BCA + MBA',occupation:'Business',marital:'Never Married',height:"5'2\"",gothra:'Garg',samaj:'Maheshwari',diet:'Jain',manglik:'Partial',rashi:'Vrishabh',income:'5-8 LPA',father:'Rajesh Jain (Textile Business)',mother:'Meena Jain (Homemaker)',family:'Joint',native:'Surat, Gujarat',isVerified:true,isPremium:true,bg:'from-emerald-100',hobbies:'Dance, Fashion Design, Cooking',about:'Business family background, looking for a well-settled match who respects Jain values and traditions.'},
+  {id:4,name:'Vivek Agarwal',gender:'male',age:31,city:'Surat',state:'Gujarat',education:'CA',occupation:'Chartered Accountant',marital:'Never Married',height:"5'8\"",gothra:'Bansal',samaj:'Vaishya Vani',diet:'Vegetarian',manglik:'No',rashi:'Mithun',income:'20+ LPA',father:'Vinod Agarwal (Diamond Business)',mother:'Rekha Agarwal (Homemaker)',family:'Joint',native:'Surat, Gujarat',isVerified:true,isPremium:true,bg:'from-amber-100',hobbies:'Reading, Chess, Badminton',about:'CA professional from a respected Vani family. Looking for a well-educated, family-oriented partner.'},
+  {id:5,name:'Pooja Khandelwal',gender:'female',age:27,city:'Jaipur',state:'Rajasthan',education:'B.Com + LLB',occupation:'Lawyer',marital:'Never Married',height:"5'3\"",gothra:'Goyal',samaj:'Oswal',diet:'Vegetarian',manglik:'No',rashi:'Simha',income:'8-12 LPA',father:'Ashok Khandelwal (Advocate)',mother:'Prabha Khandelwal (Teacher)',family:'Nuclear',native:'Jodhpur, Rajasthan',isVerified:false,isPremium:false,bg:'from-purple-100',hobbies:'Reading Law, Social Work, Cooking',about:'Legal professional with strong family values. Looking for a supportive and understanding partner from a good Vani family.'},
+  {id:6,name:'Nikhil Vora',gender:'male',age:28,city:'Indore',state:'Madhya Pradesh',education:'M.Tech',occupation:'Product Manager',marital:'Never Married',height:"5'10\"",gothra:'Mittal',samaj:'Oswal',diet:'Vegetarian',manglik:'Yes',rashi:'Dhanu',income:'12-18 LPA',father:'Suresh Vora (Cloth Merchant)',mother:'Asha Vora (Homemaker)',family:'Nuclear',native:'Indore, MP',isVerified:true,isPremium:false,bg:'from-indigo-100',hobbies:'Photography, Travel, Cycling',about:'Tech professional working in product management. Looking for an ambitious yet family-oriented partner from the Vani community.'},
+  {id:7,name:'Divya Gupta',gender:'female',age:24,city:'Delhi',state:'Delhi',education:'MBBS',occupation:'Doctor',marital:'Never Married',height:"5'5\"",gothra:'Singhal',samaj:'Vaishya Vani',diet:'Vegetarian',manglik:'No',rashi:'Karka',income:'10-15 LPA',father:'Naresh Gupta (Business)',mother:'Sunita Gupta (Doctor)',family:'Nuclear',native:'Agra, UP',isVerified:true,isPremium:true,bg:'from-teal-100',hobbies:'Painting, Singing, Reading',about:'Medical professional looking for a well-educated, understanding partner. Family and community values are very important to me.'},
+  {id:8,name:'Arjun Bansal',gender:'male',age:30,city:'Nagpur',state:'Maharashtra',education:'MBA',occupation:'Business Owner',marital:'Never Married',height:"5'11\"",gothra:'Agarwal',samaj:'Vaishya Vani',diet:'Vegetarian',manglik:'No',rashi:'Tula',income:'25+ LPA',father:'Ramesh Bansal (Wholesale Trader)',mother:'Usha Bansal (Homemaker)',family:'Joint',native:'Nagpur, MH',isVerified:true,isPremium:true,bg:'from-orange-100',hobbies:'Cricket, Business News, Travel',about:'Second-generation business family. Looking for an equally ambitious and family-oriented partner from a respected Vani family.'},
 ];
 
-function renderP(){
-  document.getElementById('profilesGrid').innerHTML=P.map(p=>{
-    const ini=p.n.split(' ').map(x=>x[0]).join('');
-    const tc=p.g==='f'?'rgba(255,185,195,.35)':'rgba(185,200,255,.35)';
-    return `<div class="pc" onclick="openPD(${p.id})">
-      <div class="pp" style="background:${p.bg}">
-        <span class="pi" style="color:${tc}">${ini}</span>
-        <div class="pb">
-          ${p.v?`<span class="tag tag-g" style="font-size:10px;padding:3px 8px">✓ Verified</span>`:''}
-          ${p.pr?`<span class="tag tag-a" style="font-size:10px;padding:3px 8px">⭐ Premium</span>`:''}
-        </div>
+const bgColors = {
+  'from-rose-100': 'linear-gradient(135deg,#ffe4e6,#fecdd3)',
+  'from-blue-100': 'linear-gradient(135deg,#dbeafe,#bfdbfe)',
+  'from-emerald-100': 'linear-gradient(135deg,#d1fae5,#a7f3d0)',
+  'from-amber-100': 'linear-gradient(135deg,#fef3c7,#fde68a)',
+  'from-purple-100': 'linear-gradient(135deg,#ede9fe,#ddd6fe)',
+  'from-indigo-100': 'linear-gradient(135deg,#e0e7ff,#c7d2fe)',
+  'from-teal-100': 'linear-gradient(135deg,#ccfbf1,#99f6e4)',
+  'from-orange-100': 'linear-gradient(135deg,#ffedd5,#fed7aa)',
+};
+
+// ── RENDER PROFILES ──
+function renderProfiles() {
+  const grid = document.getElementById('profilesGrid');
+  grid.innerHTML = profiles.map(p => {
+    const initials = p.name.split(' ').map(n=>n[0]).join('');
+    const bg = bgColors[p.bg] || 'linear-gradient(135deg,#f3f4f6,#e5e7eb)';
+    const textC = p.gender === 'female' ? '#be185d' : '#1d4ed8';
+    return `
+    <div class="profile-card" onclick="openProfileDetail(${p.id})">
+      <div class="profile-photo" style="background:${bg}">
+        <span class="profile-initials" style="color:${textC}">${initials}</span>
+        ${p.isVerified ? `<div class="profile-badge">✓ Verified</div>` : ''}
+        ${p.isPremium ? `<div class="premium-badge">⭐ Premium</div>` : ''}
       </div>
-      <div class="pbd">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px">
-          <span class="pn">${p.n}</span>
-          <span style="font-size:12px;color:#FB7185;font-weight:700">${p.age} yrs</span>
+      <div class="profile-info">
+        <div style="display:flex;justify-content:space-between;align-items:start">
+          <div class="profile-name">${p.name}</div>
+          <div class="profile-age">${p.age} yrs</div>
         </div>
-        <div class="pm">${p.city} · ${p.edu}</div>
-        <div class="pr2">
-          <button class="pa" onclick="event.stopPropagation();sendI(${p.id},'${p.n}')">♥ Interest</button>
-          <button class="ps" onclick="event.stopPropagation();saveP('${p.n}')">🔖</button>
+        <div class="profile-meta">
+          <span>📍 ${p.city}, ${p.state.slice(0,2)}</span>
+          <span>🎓 ${p.education}</span>
+        </div>
+        <div class="profile-action">
+          <button class="btn-interest" onclick="event.stopPropagation();sendInterest(${p.id},'${p.name}')">
+            ♡ Interest
+          </button>
+          <button class="btn-save" onclick="event.stopPropagation();saveProfile(${p.id},'${p.name}')">🔖</button>
         </div>
       </div>
     </div>`;
   }).join('');
 }
 
-function openPD(id){
-  const p=P.find(x=>x.id===id);if(!p)return;
-  const ini=p.n.split(' ').map(x=>x[0]).join('');
-  const tc=p.g==='f'?'rgba(255,185,195,.28)':'rgba(185,200,255,.28)';
-  document.getElementById('pdT').textContent=p.n;
-  document.getElementById('pdB').innerHTML=`
-    <div class="dph" style="background:${p.bg}">
-      <span class="din" style="color:${tc}">${ini}</span>
-      <div class="db">${p.v?`<span class="tag tag-g">✓ Verified</span>`:''}${p.pr?`<span class="tag tag-a">⭐ Premium</span>`:''}</div>
+function openProfileDetail(id) {
+  const p = profiles.find(x=>x.id===id);
+  if(!p) return;
+  const initials = p.name.split(' ').map(n=>n[0]).join('');
+  const bg = bgColors[p.bg] || 'linear-gradient(135deg,#f3f4f6,#e5e7eb)';
+  const textC = p.gender === 'female' ? '#be185d' : '#1d4ed8';
+  
+  document.getElementById('profileModalTitle').textContent = p.name + "'s Profile";
+  document.getElementById('profileModalBody').innerHTML = `
+    <div class="detail-photo" style="background:${bg}">
+      <span class="detail-initials" style="color:${textC}">${initials}</span>
+      <div class="detail-badges">
+        ${p.isVerified ? `<span class="profile-badge">✓ Verified</span>` : ''}
+        ${p.isPremium ? `<span class="premium-badge">⭐ Premium</span>` : ''}
+      </div>
     </div>
-    <div class="ds">Personal Details</div>
-    <div class="dg"><div class="df"><label>Age</label><span>${p.age} years</span></div><div class="df"><label>Height</label><span>${p.ht}</span></div><div class="df"><label>Location</label><span>${p.city}, ${p.st}</span></div><div class="df"><label>Marital Status</label><span>${p.ms}</span></div><div class="df"><label>Diet</label><span>${p.diet}</span></div><div class="df"><label>Manglik</label><span>${p.mang}</span></div></div>
-    <div class="ds">Education & Career</div>
-    <div class="dg"><div class="df"><label>Education</label><span>${p.edu}</span></div><div class="df"><label>Occupation</label><span>${p.occ}</span></div><div class="df"><label>Annual Income</label><span>${p.inc}</span></div><div class="df"><label>Rashi</label><span>${p.rashi}</span></div></div>
-    <div class="ds">Family Details</div>
-    <div class="dg"><div class="df"><label>Father</label><span>${p.fa}</span></div><div class="df"><label>Mother</label><span>${p.mo}</span></div><div class="df"><label>Family Type</label><span>${p.ft}</span></div><div class="df"><label>Native Place</label><span>${p.np}</span></div></div>
-    <div class="ds">Community</div>
-    <div class="dg"><div class="df"><label>Gothra</label><span>${p.got}</span></div><div class="df"><label>Samaj Group</label><span>${p.sam}</span></div></div>
-    <div class="ab"><strong style="color:var(--text)">About: </strong>${p.ab}</div>
-    <div class="lk"><p>🔒 Contact visible only after mutual interest is accepted</p><button class="btn btn-p" style="border-radius:11px" onclick="sendI(${p.id},'${p.n}');closeM('profileModal')">♥ Send Interest</button></div>`;
+    <div class="detail-section-title">Personal Details</div>
+    <div class="detail-grid">
+      <div class="detail-field"><label>Age</label><span>${p.age} years</span></div>
+      <div class="detail-field"><label>Height</label><span>${p.height}</span></div>
+      <div class="detail-field"><label>City</label><span>${p.city}, ${p.state}</span></div>
+      <div class="detail-field"><label>Marital Status</label><span>${p.marital}</span></div>
+      <div class="detail-field"><label>Diet</label><span>${p.diet}</span></div>
+      <div class="detail-field"><label>Manglik</label><span>${p.manglik}</span></div>
+    </div>
+    <div class="detail-section-title">Education & Career</div>
+    <div class="detail-grid">
+      <div class="detail-field"><label>Education</label><span>${p.education}</span></div>
+      <div class="detail-field"><label>Occupation</label><span>${p.occupation}</span></div>
+      <div class="detail-field"><label>Annual Income</label><span>${p.income}</span></div>
+      <div class="detail-field"><label>Rashi</label><span>${p.rashi}</span></div>
+    </div>
+    <div class="detail-section-title">Family Details</div>
+    <div class="detail-grid">
+      <div class="detail-field"><label>Father</label><span>${p.father}</span></div>
+      <div class="detail-field"><label>Mother</label><span>${p.mother}</span></div>
+      <div class="detail-field"><label>Family Type</label><span>${p.family}</span></div>
+      <div class="detail-field"><label>Native Place</label><span>${p.native}</span></div>
+    </div>
+    <div class="detail-section-title">Community & Horoscope</div>
+    <div class="detail-grid">
+      <div class="detail-field"><label>Gothra</label><span>${p.gothra}</span></div>
+      <div class="detail-field"><label>Samaj Group</label><span>${p.samaj}</span></div>
+      <div class="detail-field"><label>Hobbies</label><span>${p.hobbies}</span></div>
+    </div>
+    <div style="background:var(--cream);border-radius:12px;padding:16px;margin:16px 0;font-size:14px;color:var(--text-muted);line-height:1.7;border-left:3px solid var(--gold)">
+      <strong style="color:var(--text)">About:</strong> ${p.about}
+    </div>
+    <div class="locked-contact">
+      <p>🔒 Contact details are hidden until mutual interest is accepted</p>
+      <button class="btn btn-gold" style="justify-content:center;font-size:14px;padding:10px 20px" onclick="sendInterest(${p.id},'${p.name}');closeModal('profileModal')">♡ Send Interest</button>
+    </div>`;
+  
   document.getElementById('profileModal').classList.add('open');
   document.body.style.overflow='hidden';
 }
 
-// AUTH
-function openM(m){document.getElementById('authModal').classList.add('open');document.body.style.overflow='hidden';mTab(m)}
-function closeM(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
-function mTab(t){
-  ['fL','fOL','fR','fOV','fS'].forEach(id=>document.getElementById(id).style.display='none');
-  document.getElementById('mTabs').style.display='grid';
-  document.getElementById('mFN').style.display='block';
-  document.querySelectorAll('.mt')[0].classList.toggle('on',t==='login');
-  document.querySelectorAll('.mt')[1].classList.toggle('on',t==='register');
-  document.getElementById('mTitle').textContent=t==='login'?'Welcome back':'Create your account';
-  document.getElementById(t==='login'?'fL':'fR').style.display='block';
-  document.getElementById('mFN').innerHTML=t==='login'?'New to Vani Milan? <a class="fl" onclick="mTab(\'register\')">Register free</a>':'Already have account? <a class="fl" onclick="mTab(\'login\')">Login</a>';
-}
-function showOL(){document.getElementById('fL').style.display='none';document.getElementById('fOL').style.display='block';document.getElementById('mTitle').textContent='Login with OTP'}
-function showPL(){document.getElementById('fOL').style.display='none';document.getElementById('fL').style.display='block';document.getElementById('mTitle').textContent='Welcome back'}
-let rfC='self',grC='b';
-function setRF(v){rfC=v;['self','son','daughter'].forEach(x=>document.getElementById('rf-'+x).classList.remove('on'));document.getElementById('rf-'+v).classList.add('on')}
-function setGR(g){grC=g;document.getElementById('gB').classList.toggle('on',g==='b');document.getElementById('gG').classList.toggle('on',g==='g')}
-function doLogin(){const i=document.getElementById('lId').value,p=document.getElementById('lPw').value;if(!i||!p){toast('Please enter credentials','er');return}toast('Demo mode — login available in full version! 🚀');setTimeout(()=>closeM('authModal'),1800)}
-function sendOTP(){const m=document.getElementById('olM').value;if(m.length!==10){toast('Enter valid 10-digit mobile','er');return}document.getElementById('oSec').style.display='block';toast('OTP sent! Demo OTP: 123456 ✓','ok')}
-function verOTP(mode){
-  const sel=mode==='login'?'#fOL .orow input':'#fOV .orow input';
-  const otp=[...document.querySelectorAll(sel)].map(i=>i.value).join('');
-  if(otp==='123456'){
-    if(mode==='login'){toast('Login successful! ✓','ok');setTimeout(()=>closeM('authModal'),1500)}
-    else{['fOV','mTabs','mFN'].forEach(id=>document.getElementById(id).style.display='none');document.getElementById('fS').style.display='block';document.getElementById('mTitle').textContent="You're in! 🎉"}
-  }else toast('Invalid OTP. Demo OTP is 123456','er')
-}
-function doReg(){
-  const n=document.getElementById('rN').value,m=document.getElementById('rM').value,p=document.getElementById('rP').value;
-  if(!n){toast('Enter your name','er');return}if(m.length!==10){toast('Enter valid 10-digit mobile','er');return}if(p.length<8){toast('Password min 8 characters','er');return}
-  document.getElementById('rMS').textContent='+91 '+m;
-  document.getElementById('fR').style.display='none';document.getElementById('fOV').style.display='block';
-  document.getElementById('mTitle').textContent='Verify your mobile';document.getElementById('mFN').style.display='none';
-  toast('OTP sent to '+m+'! Demo OTP: 123456','ok')
-}
-function oNext(el,idx,grp){
-  if(el.value.length===1){const s=grp==='lo'?'#fOL .orow input':'#fOV .orow input';const n=document.querySelectorAll(s)[idx+1];if(n)n.focus()}
-}
-// Search
-function setPill(v){document.getElementById('pb').classList.toggle('on',v==='b');document.getElementById('pg2').classList.toggle('on',v==='g')}
-function doSearch(){toast('Found 8 verified profiles matching your criteria 🔍');setTimeout(()=>document.getElementById('profiles').scrollIntoView({behavior:'smooth'}),500)}
-// Actions
-function sendI(id,n){toast(`Interest sent to ${n}! 💌 They'll be notified.`,'ok')}
-function saveP(n){toast(`${n}'s profile saved to shortlist 🔖`)}
-// Mobile Nav
-function toggleNav(){document.getElementById('mobileNav').classList.toggle('open')}
-// Toast
-function toast(msg,type=''){
-  document.querySelectorAll('.tst').forEach(t=>t.remove());
-  const t=document.createElement('div');t.className='tst'+(type?' '+type:'');t.textContent=msg;document.body.appendChild(t);
-  setTimeout(()=>{t.style.opacity='0';t.style.transform='translateY(10px)';setTimeout(()=>t.remove(),300)},3800)
-}
-// Backdrop close
-document.querySelectorAll('.mbg').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow=''}})})
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})})
-// Reveal
-const rv=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.07});
-document.querySelectorAll('.rev').forEach(el=>rv.observe(el));
-// ══════════════════════════════════════════════
-// HOROSCOPE ENGINE — Vedic Astrology Calculator
-// ══════════════════════════════════════════════
-const RASHIS = [
-  { name:'Mesh',     eng:'Aries',       sym:'♈', elem:'🔥 Fire',    lord:'Mars',    color:'#EF4444', en:'Dynamic & Energetic' },
-  { name:'Vrishabh', eng:'Taurus',      sym:'♉', elem:'🌍 Earth',   lord:'Venus',   color:'#22C55E', en:'Reliable & Sensual' },
-  { name:'Mithun',   eng:'Gemini',      sym:'♊', elem:'💨 Air',     lord:'Mercury', color:'#EAB308', en:'Witty & Adaptable' },
-  { name:'Karka',    eng:'Cancer',      sym:'♋', elem:'💧 Water',   lord:'Moon',    color:'#3B82F6', en:'Nurturing & Sensitive' },
-  { name:'Simha',    eng:'Leo',         sym:'♌', elem:'🔥 Fire',    lord:'Sun',     color:'#F97316', en:'Confident & Generous' },
-  { name:'Kanya',    eng:'Virgo',       sym:'♍', elem:'🌍 Earth',   lord:'Mercury', color:'#10B981', en:'Practical & Analytical' },
-  { name:'Tula',     eng:'Libra',       sym:'♎', elem:'💨 Air',     lord:'Venus',   color:'#EC4899', en:'Balanced & Charming' },
-  { name:'Vrishchik',eng:'Scorpio',     sym:'♏', elem:'💧 Water',   lord:'Mars',    color:'#8B5CF6', en:'Intense & Determined' },
-  { name:'Dhanu',    eng:'Sagittarius', sym:'♐', elem:'🔥 Fire',    lord:'Jupiter', color:'#F59E0B', en:'Adventurous & Optimistic' },
-  { name:'Makar',    eng:'Capricorn',   sym:'♑', elem:'🌍 Earth',   lord:'Saturn',  color:'#6B7280', en:'Ambitious & Disciplined' },
-  { name:'Kumbh',    eng:'Aquarius',    sym:'♒', elem:'💨 Air',     lord:'Saturn',  color:'#06B6D4', en:'Innovative & Humanitarian' },
-  { name:'Meen',     eng:'Pisces',      sym:'♓', elem:'💧 Water',   lord:'Jupiter', color:'#A78BFA', en:'Empathetic & Imaginative' },
-];
+// ── AUTH MODAL ──
+let currentTab = 'login';
+let selectedGenderReg = 'bride';
 
-const NAKSHATRAS = [
-  {n:'Ashwini',lord:'Ketu',pada:4,nadi:'Aadi',gana:'Deva',varna:'Vaishya'},
-  {n:'Bharani',lord:'Venus',pada:4,nadi:'Madhya',gana:'Manushya',varna:'Mleccha'},
-  {n:'Krittika',lord:'Sun',pada:4,nadi:'Antya',gana:'Rakshasa',varna:'Brahmin'},
-  {n:'Rohini',lord:'Moon',pada:4,nadi:'Aadi',gana:'Manushya',varna:'Shudra'},
-  {n:'Mrigashira',lord:'Mars',pada:4,nadi:'Madhya',gana:'Deva',varna:'Farmer'},
-  {n:'Ardra',lord:'Rahu',pada:4,nadi:'Antya',gana:'Manushya',varna:'Butcher'},
-  {n:'Punarvasu',lord:'Jupiter',pada:4,nadi:'Aadi',gana:'Deva',varna:'Vaishya'},
-  {n:'Pushya',lord:'Saturn',pada:4,nadi:'Madhya',gana:'Deva',varna:'Kshatriya'},
-  {n:'Ashlesha',lord:'Mercury',pada:4,nadi:'Antya',gana:'Rakshasa',varna:'Mleccha'},
-  {n:'Magha',lord:'Ketu',pada:4,nadi:'Aadi',gana:'Rakshasa',varna:'Shudra'},
-  {n:'Purva Phalguni',lord:'Venus',pada:4,nadi:'Madhya',gana:'Manushya',varna:'Brahmin'},
-  {n:'Uttara Phalguni',lord:'Sun',pada:4,nadi:'Antya',gana:'Manushya',varna:'Kshatriya'},
-  {n:'Hasta',lord:'Moon',pada:4,nadi:'Aadi',gana:'Deva',varna:'Vaishya'},
-  {n:'Chitra',lord:'Mars',pada:4,nadi:'Madhya',gana:'Rakshasa',varna:'Farmer'},
-  {n:'Swati',lord:'Rahu',pada:4,nadi:'Antya',gana:'Deva',varna:'Butcher'},
-  {n:'Vishakha',lord:'Jupiter',pada:4,nadi:'Aadi',gana:'Rakshasa',varna:'Mleccha'},
-  {n:'Anuradha',lord:'Saturn',pada:4,nadi:'Madhya',gana:'Deva',varna:'Shudra'},
-  {n:'Jyeshtha',lord:'Mercury',pada:4,nadi:'Antya',gana:'Rakshasa',varna:'Farmer'},
-  {n:'Mula',lord:'Ketu',pada:4,nadi:'Aadi',gana:'Rakshasa',varna:'Butcher'},
-  {n:'Purva Ashadha',lord:'Venus',pada:4,nadi:'Madhya',gana:'Manushya',varna:'Brahmin'},
-  {n:'Uttara Ashadha',lord:'Sun',pada:4,nadi:'Antya',gana:'Manushya',varna:'Kshatriya'},
-  {n:'Shravana',lord:'Moon',pada:4,nadi:'Aadi',gana:'Deva',varna:'Mleccha'},
-  {n:'Dhanishta',lord:'Mars',pada:4,nadi:'Madhya',gana:'Rakshasa',varna:'Farmer'},
-  {n:'Shatabhisha',lord:'Rahu',pada:4,nadi:'Antya',gana:'Rakshasa',varna:'Butcher'},
-  {n:'Purva Bhadrapada',lord:'Jupiter',pada:4,nadi:'Aadi',gana:'Manushya',varna:'Brahmin'},
-  {n:'Uttara Bhadrapada',lord:'Saturn',pada:4,nadi:'Madhya',gana:'Manushya',varna:'Kshatriya'},
-  {n:'Revati',lord:'Mercury',pada:4,nadi:'Antya',gana:'Deva',varna:'Shudra'},
-];
-
-const TRAITS = {
-  0:['Bold','Pioneering','Energetic','Competitive','Impulsive'],
-  1:['Patient','Loyal','Artistic','Stubborn','Sensual'],
-  2:['Curious','Communicative','Versatile','Indecisive','Witty'],
-  3:['Nurturing','Intuitive','Emotional','Protective','Home-loving'],
-  4:['Generous','Charismatic','Creative','Proud','Warm-hearted'],
-  5:['Analytical','Reliable','Perfectionist','Helpful','Detail-oriented'],
-  6:['Diplomatic','Charming','Fair-minded','Indecisive','Social'],
-  7:['Passionate','Resourceful','Brave','Jealous','Determined'],
-  8:['Optimistic','Adventurous','Philosophical','Blunt','Freedom-loving'],
-  9:['Disciplined','Ambitious','Practical','Reserved','Responsible'],
-  10:['Original','Humanitarian','Intellectual','Rebellious','Visionary'],
-  11:['Empathetic','Creative','Intuitive','Dreamy','Spiritual'],
-};
-
-const COMPAT = {
-  0:[1,4,8,10],   1:[2,5,9,11],  2:[0,3,6,10],   3:[1,4,7,11],
-  4:[0,3,8,9],    5:[1,4,6,10],  6:[2,5,9,11],    7:[3,5,8,11],
-  8:[0,4,7,9],    9:[4,5,8,10],  10:[0,2,5,9],    11:[3,6,7,9],
-};
-
-const LUCKY = {
-  0:{nums:[1,9],colors:['🔴 Red','⚪ White'],days:['Tuesday','Sunday'],gem:'💎 Red Coral',metal:'🥇 Gold',god:'🙏 Lord Hanuman'},
-  1:{nums:[2,6],colors:['🟢 Green','⚪ White'],days:['Friday','Monday'],gem:'💚 Emerald',metal:'🥈 Silver',god:'🙏 Goddess Lakshmi'},
-  2:{nums:[3,6],colors:['🟡 Yellow','🟢 Green'],days:['Wednesday','Friday'],gem:'💚 Emerald',metal:'🥇 Gold',god:'🙏 Lord Vishnu'},
-  3:{nums:[2,7],colors:['⚪ White','🔵 Silver'],days:['Monday','Thursday'],gem:'🤍 Pearl',metal:'🥈 Silver',god:'🙏 Lord Shiva'},
-  4:{nums:[1,4],colors:['🟡 Golden','🔶 Orange'],days:['Sunday','Tuesday'],gem:'♦️ Ruby',metal:'🥇 Gold',god:'🙏 Lord Surya'},
-  5:{nums:[3,6],colors:['🟢 Green','🔵 Blue'],days:['Wednesday','Friday'],gem:'💚 Emerald',metal:'🥇 Gold',god:'🙏 Goddess Saraswati'},
-  6:{nums:[2,6],colors:['🟤 Brown','⚪ Pink'],days:['Friday','Wednesday'],gem:'💎 Diamond',metal:'🥈 Silver',god:'🙏 Goddess Lakshmi'},
-  7:{nums:[1,8],colors:['🔴 Red','🟣 Maroon'],days:['Tuesday','Saturday'],gem:'🔴 Red Coral',metal:'🥇 Gold',god:'🙏 Lord Ganesha'},
-  8:{nums:[3,9],colors:['🟡 Yellow','🟠 Orange'],days:['Thursday','Tuesday'],gem:'💛 Yellow Sapphire',metal:'🥇 Gold',god:'🙏 Lord Brihaspati'},
-  9:{nums:[8,6],colors:['⚫ Black','🔵 Blue'],days:['Saturday','Friday'],gem:'💎 Blue Sapphire',metal:'⚙️ Iron',god:'🙏 Lord Saturn'},
-  10:{nums:[4,8],colors:['🔵 Blue','🩵 Turquoise'],days:['Saturday','Wednesday'],gem:'💎 Blue Sapphire',metal:'⚙️ Iron',god:'🙏 Lord Shiva'},
-  11:{nums:[3,7],colors:['🟡 Yellow','🟢 Sea Green'],days:['Thursday','Monday'],gem:'💛 Yellow Sapphire',metal:'🥈 Silver',god:'🙏 Lord Vishnu'},
-};
-
-const GUNA_CATEGORIES = [
-  {name:'Varna',max:1},{name:'Vashya',max:2},{name:'Tara',max:3},
-  {name:'Yoni',max:4},{name:'Graha Maitri',max:5},{name:'Gana',max:6},
-  {name:'Bhakoot',max:7},{name:'Nadi',max:8}
-];
-
-function getRashiFromDob(dob) {
-  const d=new Date(dob), m=d.getMonth()+1, day=d.getDate();
-  if((m===3&&day>=21)||(m===4&&day<=19)) return 0;
-  if((m===4&&day>=20)||(m===5&&day<=20)) return 1;
-  if((m===5&&day>=21)||(m===6&&day<=20)) return 2;
-  if((m===6&&day>=21)||(m===7&&day<=22)) return 3;
-  if((m===7&&day>=23)||(m===8&&day<=22)) return 4;
-  if((m===8&&day>=23)||(m===9&&day<=22)) return 5;
-  if((m===9&&day>=23)||(m===10&&day<=22)) return 6;
-  if((m===10&&day>=23)||(m===11&&day<=21)) return 7;
-  if((m===11&&day>=22)||(m===12&&day<=21)) return 8;
-  if((m===12&&day>=22)||(m===1&&day<=19)) return 9;
-  if((m===1&&day>=20)||(m===2&&day<=18)) return 10;
-  return 11;
+function openModal(type) {
+  const m = document.getElementById('authModal');
+  m.classList.add('open');
+  document.body.style.overflow='hidden';
+  switchTab(type);
 }
 
-function getNakFromDob(dob) {
-  const d=new Date(dob);
-  const dayOfYear=Math.floor((d-new Date(d.getFullYear(),0,0))/(1000*60*60*24));
-  return NAKSHATRAS[dayOfYear % 27];
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow='';
 }
 
-function getManglik(dob) {
-  const d=new Date(dob), day=d.getDate();
-  if(day%10===4||day%10===8) return {status:'Manglik',cls:'manglik-yes',sub:'Mars in sensitive house',icon:'🔴'};
-  if(day%5===0) return {status:'Partial Manglik',cls:'manglik-partial',sub:'Mars partially afflicted',icon:'🟠'};
-  return {status:'Non-Manglik',cls:'manglik-no',sub:'Mars well placed',icon:'🟢'};
-}
-
-function getGunaScore(rashiIdx) {
-  return GUNA_CATEGORIES.map(g => {
-    const score = Math.floor(Math.random() * (g.max+1));
-    return {...g, score: Math.max(Math.floor(g.max*0.55), score)};
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById('loginForm').style.display = tab==='login' ? 'block' : 'none';
+  document.getElementById('registerForm').style.display = tab==='register' ? 'block' : 'none';
+  document.getElementById('otpLoginForm').style.display = 'none';
+  document.getElementById('otpVerifyForm').style.display = 'none';
+  document.getElementById('successForm').style.display = 'none';
+  document.getElementById('modalTitle').textContent = tab==='login' ? 'Welcome Back' : 'Create Account';
+  document.querySelectorAll('.modal-tab').forEach((t,i) => {
+    t.classList.toggle('active', (tab==='login' && i===0) || (tab==='register' && i===1));
   });
 }
 
-function calcHoro() {
-  const dob = document.getElementById('hDob').value;
-  if(!dob) { toast('Please enter your date of birth','er'); return; }
-  const birthYear = new Date(dob).getFullYear();
-  if(birthYear < 1950 || birthYear > 2010) { toast('Please enter a valid birth year (1950–2010)','er'); return; }
-
-  const rashiIdx = getRashiFromDob(dob);
-  const rashi = RASHIS[rashiIdx];
-  const nak = getNakFromDob(dob);
-  const manglik = getManglik(dob);
-  const lucky = LUCKY[rashiIdx];
-  const traits = TRAITS[rashiIdx];
-  const compatIdxs = COMPAT[rashiIdx];
-  const incompatIdxs = [0,1,2,3,4,5,6,7,8,9,10,11].filter(i=>!compatIdxs.includes(i)&&i!==rashiIdx).slice(0,3);
-  const d = new Date(dob);
-  const nakIdx = NAKSHATRAS.indexOf(nak);
-  const pada = (Math.floor((nakIdx*4 + d.getDate()%4))%4)+1;
-  const gunas = getGunaScore(rashiIdx);
-  const gunaTotal = gunas.reduce((s,g)=>s+g.score, 0);
-
-  // Render
-  document.getElementById('hSymbol').textContent = rashi.sym;
-  document.getElementById('hRashiName').textContent = rashi.name;
-  document.getElementById('hRashiEng').textContent = rashi.eng + ' — ' + rashi.en;
-  document.getElementById('hElem').textContent = rashi.elem + ' · Lord: ' + rashi.lord;
-  document.getElementById('hNak').textContent = nak.n;
-  document.getElementById('hNakPada').textContent = 'Lord: ' + nak.lord;
-  document.getElementById('hCharan').textContent = ['1st','2nd','3rd','4th'][pada-1] + ' Pada';
-  document.getElementById('hLord').textContent = 'Sign Lord: ' + rashi.lord;
-  document.getElementById('hManglik').textContent = manglik.icon + ' ' + manglik.status;
-  document.getElementById('hManglik').className = 'horo-card-val ' + manglik.cls;
-  document.getElementById('hMangSub').textContent = manglik.sub;
-  document.getElementById('hNadi').textContent = nak.nadi + ' Nadi';
-  document.getElementById('hGana').textContent = nak.gana + ' Gana';
-  document.getElementById('hGanaSub').textContent = nak.gana==='Deva'?'Divine, gentle nature':nak.gana==='Manushya'?'Human, balanced nature':'Intense, strong nature';
-  document.getElementById('hVarna').textContent = nak.varna;
-
-  // Guna bars
-  document.getElementById('gunaTotal').textContent = gunaTotal + '/36';
-  document.getElementById('gunaBars').innerHTML = gunas.map(g=>`
-    <div class="progress-ring">
-      <span class="prog-label">${g.name}</span>
-      <div class="prog-track"><div class="prog-fill" style="width:${(g.score/g.max)*100}%" data-w="${(g.score/g.max)*100}"></div></div>
-      <span class="score-num">${g.score}/${g.max}</span>
-    </div>`).join('');
-
-  // Lucky items
-  document.getElementById('luckyItems').innerHTML = [
-    `<span class="lucky-chip">🔢 Lucky Numbers: ${lucky.nums.join(', ')}</span>`,
-    `<span class="lucky-chip">${lucky.colors[0]}</span>`,
-    `<span class="lucky-chip">${lucky.colors[1]}</span>`,
-    `<span class="lucky-chip">📅 ${lucky.days[0]}</span>`,
-    `<span class="lucky-chip">📅 ${lucky.days[1]}</span>`,
-    `<span class="lucky-chip">${lucky.gem}</span>`,
-    `<span class="lucky-chip">${lucky.metal}</span>`,
-    `<span class="lucky-chip">${lucky.god}</span>`,
-  ].join('');
-
-  // Compatible signs
-  document.getElementById('compatSigns').innerHTML = compatIdxs.map(i=>
-    `<span class="compat-sign">${RASHIS[i].sym} ${RASHIS[i].name} (${RASHIS[i].eng})</span>`).join('');
-  document.getElementById('incompatSigns').innerHTML = incompatIdxs.map(i=>
-    `<span class="compat-sign incompat-sign">${RASHIS[i].sym} ${RASHIS[i].name}</span>`).join('');
-
-  // Traits
-  document.getElementById('traitList').innerHTML = traits.map(t=>`<span class="trait">${t}</span>`).join('');
-
-  // Show result
-  const result = document.getElementById('horoResult');
-  result.classList.add('show');
-  setTimeout(()=>result.scrollIntoView({behavior:'smooth',block:'start'}), 100);
-
-  // Animate progress bars
-  setTimeout(()=>{
-    document.querySelectorAll('.prog-fill').forEach(el=>{
-      el.style.width = el.dataset.w + '%';
-    });
-  }, 200);
-
-  toast('✨ Kundali calculated successfully!', 'ok');
+function showOtpLogin() {
+  document.getElementById('loginForm').style.display='none';
+  document.getElementById('otpLoginForm').style.display='block';
+  document.getElementById('modalTitle').textContent='Login with OTP';
 }
 
-renderP();
+function showPasswordLogin() {
+  document.getElementById('otpLoginForm').style.display='none';
+  document.getElementById('loginForm').style.display='block';
+  document.getElementById('modalTitle').textContent='Welcome Back';
+}
+
+function showForgotPassword() {
+  showToast('Password reset OTP will be sent to your registered mobile 📱');
+}
+
+function setGenderReg(g) {
+  selectedGenderReg = g;
+  document.getElementById('gBride').classList.toggle('active', g==='bride');
+  document.getElementById('gGroom').classList.toggle('active', g==='groom');
+}
+
+function setRegFor(v) {
+  ['self','son','daughter'].forEach(x => document.getElementById('r'+x).classList.remove('active'));
+  document.getElementById('r'+v).classList.add('active');
+}
+
+function doLogin() {
+  const id = document.getElementById('loginId').value;
+  const pass = document.getElementById('loginPass').value;
+  if(!id || !pass) { showToast('Please enter credentials', 'error'); return; }
+  showToast('Demo mode — Login functionality available in full version! 🚀');
+  setTimeout(() => closeModal('authModal'), 2000);
+}
+
+function sendOtp() {
+  const mob = document.getElementById('otpMobile').value;
+  if(mob.length !== 10) { showToast('Enter valid 10-digit mobile number', 'error'); return; }
+  document.getElementById('otpInputSection').style.display='block';
+  showToast(`OTP sent to ${mob}! (Demo OTP: 123456)`, 'success');
+}
+
+function verifyOtpLogin() {
+  const inputs = document.querySelectorAll('#otpLoginForm .otp-input input');
+  const otp = [...inputs].map(i=>i.value).join('');
+  if(otp==='123456') {
+    showToast('✅ Login successful! Welcome to Vani Milan', 'success');
+    setTimeout(() => closeModal('authModal'), 1500);
+  } else {
+    showToast('Invalid OTP. Demo OTP is 123456', 'error');
+  }
+}
+
+function doRegister() {
+  const name = document.getElementById('regName').value;
+  const mobile = document.getElementById('regMobile').value;
+  const pass = document.getElementById('regPass').value;
+  if(!name) { showToast('Please enter your name', 'error'); return; }
+  if(mobile.length !== 10) { showToast('Enter valid 10-digit mobile number', 'error'); return; }
+  if(pass.length < 8) { showToast('Password must be minimum 8 characters', 'error'); return; }
+  document.getElementById('regMobileDisplay').textContent = '+91 ' + mobile;
+  document.getElementById('registerForm').style.display='none';
+  document.getElementById('otpVerifyForm').style.display='block';
+  document.getElementById('modalTitle').textContent = 'Verify Mobile';
+  showToast(`OTP sent to ${mobile}! (Demo OTP: 123456)`, 'success');
+}
+
+function verifyRegOtp() {
+  const inputs = document.querySelectorAll('#otpVerifyForm .otp-input input');
+  const otp = [...inputs].map(i=>i.value).join('');
+  if(otp==='123456') {
+    document.getElementById('otpVerifyForm').style.display='none';
+    document.getElementById('successForm').style.display='block';
+    document.getElementById('modalTitle').textContent = 'Registration Complete!';
+    document.querySelectorAll('.modal-tabs')[0].style.display='none';
+  } else {
+    showToast('Invalid OTP. Demo OTP is 123456', 'error');
+  }
+}
+
+function otpNext(el, idx) {
+  if(el.value.length===1) {
+    const next = el.parentElement.children[idx+1];
+    if(next) next.focus();
+  }
+}
+function regOtpNext(el, idx) {
+  if(el.value.length===1) {
+    const next = el.parentElement.children[idx+1];
+    if(next) next.focus();
+  }
+}
+
+function sendInterest(id, name) {
+  showToast(`Interest sent to ${name}! 💌 They'll be notified.`, 'success');
+}
+
+function saveProfile(id, name) {
+  showToast(`${name}'s profile saved to shortlist 🔖`);
+}
+
+function showAllProfiles() {
+  showToast('Full profile browsing available after launch! Showing all 8 demo profiles.');
+}
+
+// ── SEARCH ──
+let selectedGender = 'bride';
+function setGender(g) {
+  selectedGender = g;
+  document.getElementById('gbride').classList.toggle('active', g==='bride');
+  document.getElementById('ggroom').classList.toggle('active', g==='groom');
+}
+
+function doSearch() {
+  showToast('Searching... Found 8 verified profiles matching your criteria 🔍');
+  setTimeout(() => {
+    document.getElementById('profiles').scrollIntoView({behavior:'smooth'});
+  }, 600);
+}
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+
+// ── TOAST ──
+function showToast(msg, type='') {
+  const existing = document.querySelector('.toast');
+  if(existing) existing.remove();
+  const t = document.createElement('div');
+  t.className = 'toast' + (type ? ' '+type : '');
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.opacity='0'; t.style.transform='translateY(20px)'; setTimeout(()=>t.remove(),300); }, 3500);
+}
+
+// ── CLOSE MODAL ON BACKDROP ──
+document.querySelectorAll('.modal-overlay').forEach(o => {
+  o.addEventListener('click', e => { if(e.target===o) { o.classList.remove('open'); document.body.style.overflow=''; } });
+});
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── INIT ──
+renderProfiles();
+
+// ── SMOOTH NAV ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+
+// ── NAVBAR SCROLL EFFECT ──
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(123,28,28,0.12)' : '';
+});
 </script>
 </body>
 </html>
